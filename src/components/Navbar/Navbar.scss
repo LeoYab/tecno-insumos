@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+
+.navbar {
+    &-brand {
+
+        font-family: 'Roboto Condensed', sans-serif;
+        font-weight: 600;
+        font-style: italic;
+        color: #ffffff;
+
+        &:hover {
+            transition: color .15s ease-in-out;
+            color: #0dcaf0;
+        }
+
+        & img {
+            width: 45px;
+        }
+    }
+}
+
+/*---SUB-MENUS DE CATEGORÍAS---*/
+
+.dropdown-menu li {
+    position: relative;
+}
+
+.dropdown-menu .dropdown-submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+}
+
+.dropdown-menu .dropdown-submenu-left {
+    right: 100%;
+    left: auto;
+}
+
+.dropdown-menu>li:hover>.dropdown-submenu {
+    display: block;
+}
+
+.nav-item:hover .category{ 
+    display: block; 
+}
+@media (max-width: 991px){
+    li.nav-item.dropdown {
+        width: 20%;
+    }
+}
+
+/*---ESTILO PARA LOS BOTONES DE CATEGORÍAS---*/
+
+.btn {
+
+    &:first-child:hover {
+        color: #fff;
+    }
+
+    &:first-child:active {
+        color: #fff;
+    }
+
+    &-link {
+        --bs-btn-active-color: var(--bs-nav-link-color);
+    }
+
+}
+    .dropdown-item.active,
+    .dropdown-item:active {
+        text-decoration: none;
+        background-color: grey;
+    }
+
+    .btn:focus-visible {
+        color: #fff;
+        background-color: var(--bs-btn-hover-bg);
+        box-shadow: none;
+    }
+
+    /*---MENU HAMBURGUESA ANIMADO---*/
+
+    .navbar-toggler {
+
+        border: none;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+    }
+
+    .btn-outline-info {
+        --bs-btn-hover-color: #fff;
+        --bs-btn-active-color: #fff;
+    }
+
+    .bg-dark {
+        --bs-bg-opacity: .9;
+    }
+
+    .navbar-toggler span {
+        display: block;
+        background-color: #ffffff;
+        height: 3px;
+        width: 25px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: relative;
+        left: 0;
+        opacity: 1;
+        transition: all 0.35s ease-out;
+        transform-origin: center left;
+    }
+
+    .navbar-toggler span:nth-child(1) {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+
+    .navbar-toggler span:nth-child(2) {
+        opacity: 1;
+    }
+
+    .navbar-toggler span:nth-child(3) {
+        transform: translate(0%, 0%) rotate(0deg);
+    }
+
+    .navbar-toggler span:nth-child(1) {
+        margin-top: 0.3em;
+    }
+
+    .navbar-toggler:not(.collapsed) span:nth-child(1) {
+        transform: translate(15%, -33%) rotate(45deg);
+    }
+
+    .navbar-toggler:not(.collapsed) span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .navbar-toggler:not(.collapsed) span:nth-child(3) {
+        transform: translate(15%, 33%) rotate(-45deg);
+    }
