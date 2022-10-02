@@ -19,7 +19,6 @@ const ItemCount = ({ onAdd }) => {
     }
 
 
-
     return (
         <div>
             <div className="input-group mb-3 justify-content-center">
@@ -29,7 +28,7 @@ const ItemCount = ({ onAdd }) => {
             </div>
             <h3>Stock: {stock - value}</h3>
             <div>
-                <button onClick={funconAdd} className="btn btn-outline-secondary" type="button">Agregar al carrito</button>
+                <button id="addToCart" onClick={funconAdd} className="btn btn-outline-secondary" type="button">Agregar al carrito</button>
             </div>
         </div>
     )

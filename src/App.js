@@ -3,6 +3,7 @@ import './App.scss';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
+import products from "./asyncMock"
 
 function App() {
 
@@ -34,7 +35,9 @@ function App() {
       } />
 
       <ItemCount onAdd={[handleOnAdd, stock]} />
-
+      
+{products.map(prod =>  <img key={prod.id} src={prod.img} alt="img"></img>)}
+      
     </div>
   );
 }
