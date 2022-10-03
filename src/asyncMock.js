@@ -441,7 +441,7 @@ export const getProducts = () => {
               
                       porductsList(products)
               
-                  }, 0)
+                  }, 2000)
                       
               })
               

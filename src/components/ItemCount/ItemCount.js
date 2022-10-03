@@ -21,7 +21,7 @@ const ItemCount = ({ onAdd }) => {
 
     return (
         <div>
-            <div className="input-group mb-3 justify-content-center">
+            <div className="input-group mb-3 mt-3 justify-content-center">
                 <button onClick={decrement} className="btn btn-outline-secondary" type="button">-</button>
                 <input type="text" id="inputCart" className="form-control text-center" value={value} disabled />
                 <button onClick={increment} className="btn btn-outline-secondary" type="button">+</button>

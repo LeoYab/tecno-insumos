@@ -1,5 +1,10 @@
 .card{
     width: 18rem;
+
+    &:hover{
+        transition: 300ms;
+        box-shadow: 0 .5rem 1rem rgba(2, 2, 2, 0.200)!important;
+    }
 }
 
 .card-img-top{
