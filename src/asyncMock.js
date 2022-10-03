@@ -432,4 +432,19 @@ const products = [
 
 ]
 
-export default products
+
+export const getProducts = () => {
+
+    return new Promise ((porductsList) => {
+              
+                  setTimeout (() => {
+              
+                      porductsList(products)
+              
+                  }, 0)
+                      
+              })
+              
+  
+  }
+  

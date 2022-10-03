@@ -3,7 +3,7 @@ import './App.scss';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemCount from './components/ItemCount/ItemCount';
-import products from "./asyncMock"
+
 
 function App() {
 
@@ -26,6 +26,10 @@ function App() {
 
       <Navbar />
 
+    
+
+      <ItemCount onAdd={[handleOnAdd, stock]} />
+      
       <ItemListContainer greeting={
         {
           dia: "Buenos días",
@@ -33,11 +37,6 @@ function App() {
           noche: "Buenas noches"
         }
       } />
-
-      <ItemCount onAdd={[handleOnAdd, stock]} />
-      
-{products.map(prod =>  <img key={prod.id} src={prod.img} alt="img"></img>)}
-      
     </div>
   );
 }
