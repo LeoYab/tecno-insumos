@@ -324,7 +324,7 @@ const products = [
     name: "Gigabyte Z690",
     description: "Gigabyte Z690 Ud Ax Ddr5 Socket 1700",
     price: 57890,
-    stock: 1,
+    stock: 2,
     category: "Motherboards",
     subcategory:".",
     img:"/images/Motherboards/Gigabyte/Gigabyte Z690 Ud Ax Ddr5 Socket 1700_1.webp",
@@ -444,7 +444,18 @@ export const getProducts = () => {
                   }, 2000)
                       
               })
-              
-  
   }
   
+
+  export const getProductbyId = (id) => {
+
+    return new Promise ((productView) => {
+
+        setTimeout(() => {
+
+            productView(products.find(prod => prod.id === id ))
+          
+        }, 0)
+
+    })
+  }

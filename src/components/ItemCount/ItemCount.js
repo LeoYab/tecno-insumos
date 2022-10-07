@@ -26,7 +26,7 @@ const ItemCount = ({ onAdd }) => {
                 <input type="text" id="inputCart" className="form-control text-center" value={value} disabled />
                 <button onClick={increment} className="btn btn-outline-secondary" type="button">+</button>
             </div>
-            <h3>Stock: {stock - value}</h3>
+            <h5>Stock: {stock - value}</h5>
             <div>
                 <button id="addToCart" onClick={funconAdd} className="btn btn-outline-secondary" type="button">Agregar al carrito</button>
             </div>

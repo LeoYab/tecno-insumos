@@ -2,23 +2,11 @@
 import './App.scss';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import ItemCount from './components/ItemCount/ItemCount';
-
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 
 function App() {
 
-  let stock = 5;
-
-  const handleOnAdd = () => {
-    
-    let inputCart = document.getElementById("inputCart").value;
-    let onCart = inputCart;
-   
-    inputCart > stock ? onCart = stock : onCart = inputCart;
-
-    document.getElementById("onCart").innerText = onCart;
-
-  }
+  
 
   return (
 
@@ -28,7 +16,7 @@ function App() {
 
     
 
-      <ItemCount onAdd={[handleOnAdd, stock]} />
+   
       
       <ItemListContainer greeting={
         {
@@ -37,6 +25,8 @@ function App() {
           noche: "Buenas noches"
         }
       } />
+<ItemDetailContainer />
+      
     </div>
   );
 }

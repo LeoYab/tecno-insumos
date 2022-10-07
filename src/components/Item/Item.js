@@ -5,14 +5,14 @@ const Item = ({ id, img, name, description, price }) => {
 
     return (
 
-        <div className="card col-2 mt-1 shadow-sm p-3 mb-5 bg-body  border-0">
+        <div id={id} className="card col-2 mt-1 shadow-sm p-3 mb-5 bg-body border-0">
             <div id={`carouselControls${id}`}  className="carousel carousel-dark slide">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
                         <img src={img} className="card-img-top align-self-center" alt={name} />
                     </div>
                     <div className="carousel-item">
-                        <img src={img.replace("_1", "_2")} className="card-img-top align-self-center" alt={name} />
+                        <img src={img} className="card-img-top align-self-center" alt={name} />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target={`#carouselControls${id}`} data-bs-slide="prev">
