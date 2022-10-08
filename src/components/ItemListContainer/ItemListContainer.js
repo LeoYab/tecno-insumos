@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react'
-import { getProducts } from '../../asyncMock'
+import { getProducts, filterProductByCategory, filterProductBySubCategory, filterProductByInputSearch } from '../../asyncMock'
 import ItemList from '../ItemList/ItemList'
 import "../ItemListContainer/ItemListContainer.scss"
+import { useParams } from 'react-router-dom'
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -16,19 +17,25 @@ const ItemListContainer = ({ greeting }) => {
             <h2>{greetingTime}</h2> 
             
         ) */
+
+    const { categoryId, subcategoryId, imputSearchId } = useParams();
+
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
+  useEffect(() => {
 
-    useEffect(() => {
+        const asyncFuncProd = imputSearchId ? filterProductByInputSearch(imputSearchId) : (categoryId ? (subcategoryId ? filterProductBySubCategory(subcategoryId) : filterProductByCategory(categoryId)) : getProducts());
+   
 
-        getProducts().then(respProducts => {
+        asyncFuncProd.then(respProducts => {
             setProducts(respProducts);
         }).finally(() => {
             setLoading(false);
         })
 
-    }, [])
+    }, [categoryId, subcategoryId, imputSearchId]) 
+
 
     if (loading) {
         return (

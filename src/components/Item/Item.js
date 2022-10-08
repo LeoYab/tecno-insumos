@@ -1,7 +1,8 @@
 import "../Item/Item.scss"
 import Button from "../Button/Button";
+import { Link } from "react-router-dom"
 
-const Item = ({ id, img, name, description, price }) => {
+const Item = ({ id, img, img2, name, description, price, info }) => {
 
     return (
 
@@ -12,7 +13,7 @@ const Item = ({ id, img, name, description, price }) => {
                         <img src={img} className="card-img-top align-self-center" alt={name} />
                     </div>
                     <div className="carousel-item">
-                        <img src={img} className="card-img-top align-self-center" alt={name} />
+                        <img src={img2} className="card-img-top align-self-center" alt={name} />
                     </div>
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target={`#carouselControls${id}`} data-bs-slide="prev">
@@ -30,7 +31,9 @@ const Item = ({ id, img, name, description, price }) => {
                 <p className="card-text">{description}</p>
             </div>
             <h6>Precio: ${price}</h6>
-            <Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Agregar al carrito</Button>
+      
+           <Link to = {`/detail/${id}`}><Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Detalle</Button></Link>
+           
         </div>
 
     )
