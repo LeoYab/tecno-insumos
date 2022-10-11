@@ -25,14 +25,13 @@ const Item = ({ id, img, img2, name, description, price, info }) => {
                     <span className="visually-hidden">Next</span>
                 </button>
             </div>
-            {/*      <img src={img} className="card-img-top align-self-center d-block w-100" alt={name} /> */}
             <div className="card-body">
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text">{description}</p>
             </div>
             <h6>Precio: ${price}</h6>
       
-           <Link to = {`/detail/${id}`}><Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Detalle</Button></Link>
+           <Link to = {`/item/${id}`}><Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Detalle</Button></Link>
            
         </div>
 

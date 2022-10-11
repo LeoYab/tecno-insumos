@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom'
 
 const ItemListContainer = ({ greeting }) => {
 
+    /* Comentado: Muestra saludo dependiendo del horario*/
+    
     /* const date = new Date();
     const hour = date.getHours();
     let greetingTime; 
@@ -25,9 +27,10 @@ const ItemListContainer = ({ greeting }) => {
 
   useEffect(() => {
 
-        const asyncFuncProd = imputSearchId ? filterProductByInputSearch(imputSearchId) : (categoryId ? (subcategoryId ? filterProductBySubCategory(subcategoryId) : filterProductByCategory(categoryId)) : getProducts());
-   
+    /* UseEffect en donde trae el filtrado de productos dependiendo de qué parámetro esté activo. Sino muestra la totalidad de productos */
 
+        const asyncFuncProd = imputSearchId ? filterProductByInputSearch(imputSearchId) : (categoryId ? (subcategoryId ? filterProductBySubCategory(subcategoryId) : filterProductByCategory(categoryId)) : getProducts());
+        setLoading(true);
         asyncFuncProd.then(respProducts => {
             setProducts(respProducts);
         }).finally(() => {
@@ -37,6 +40,8 @@ const ItemListContainer = ({ greeting }) => {
     }, [categoryId, subcategoryId, imputSearchId]) 
 
 
+      /* Si es verdadero muestra el spinner de carga*/
+
     if (loading) {
         return (
             <div className="spinner-border text-info m-5" role="status">
@@ -44,6 +49,8 @@ const ItemListContainer = ({ greeting }) => {
             </div>
         )
     }
+
+
 
     return (
 

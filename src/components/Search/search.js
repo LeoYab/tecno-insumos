@@ -2,6 +2,9 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import Button from "../Button/Button"
 
+/* Buscador de productos donde envía a App.js el valor del imput ingresado para que luego lo tome ItemListContainer y los muestre en pantalla.
+Se generó una propiedad keywords dentro de los objetos en donde estarán las palabras clave de búsqueda.  */
+
 const Search = () => {
 
     const [imputSearch, setInputSearch] = useState("");
