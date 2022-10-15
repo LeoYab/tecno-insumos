@@ -1,17 +1,27 @@
 import ItemCount from "../ItemCount/ItemCount";
+import Button from "../Button/Button";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import "./ItemDetail.scss"
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext";
+
 
 const ItemDetail = ({ id, img, img2, price, name, description, stock, info }) => {
-    
 
-    const handleOnAdd = () => {
+    const [totProd, setTotProd] = useState(0)
 
-        let inputCart = document.getElementById("inputCart").value;
-        let onCart = inputCart;
+    const { addItem } = useContext(CartContext)
 
-        inputCart > stock ? onCart = stock : onCart = inputCart;
 
-        document.getElementById("onCart").innerText = onCart;
+    const handleOnAdd = (quantity) => {
+     
+       const addProdToCart = { id, name, price, img, img2, quantity }
+
+        addItem(addProdToCart)
+
+        setTotProd(quantity)
+
 
     }
 
@@ -30,7 +40,7 @@ const ItemDetail = ({ id, img, img2, price, name, description, stock, info }) =>
                                 <img src={img2} className="card-img-top align-self-center removeBg" alt={name} />
                             </div>
                         </div>
-                    
+
                         <button className="carousel-control-prev" type="button" data-bs-target={`#carouselControls2${id}`} data-bs-slide="prev">
                             <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                             <span className="visually-hidden">Previous</span>
@@ -42,12 +52,13 @@ const ItemDetail = ({ id, img, img2, price, name, description, stock, info }) =>
                     </div>
 
                 </div>
-                
+
                 <div className="col-4 bg-light border rounded">
                     <h1 className="mb-4 fw-bold">{name}</h1>
                     <p className="mb-4">{description}</p>
                     <h2>${price}</h2>
-                    <ItemCount onAdd={[handleOnAdd, stock]} />
+
+                    {totProd ? <Link to="/cart"><Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Terminar Compra</Button></Link> : <ItemCount onAdd={handleOnAdd} stock={stock}/>}
 
                 </div>
             </div>

@@ -565,11 +565,11 @@ const products = [
 
 export const getProducts = () => {
 
-    return new Promise((porductsList) => {
+    return new Promise((resolve) => {
 
         setTimeout(() => {
 
-            porductsList(products)
+            resolve(products)
 
         }, 1500)
 
@@ -580,11 +580,11 @@ export const getProducts = () => {
 
 export const getProductbyId = (productId) => {
 
-    return new Promise((productView) => {
+    return new Promise((resolve) => {
 
         setTimeout(() => {
 
-            productView(products.find(prod => prod.id === productId))
+            resolve(products.find(prod => prod.id === productId))
 
         }, 1000)
 
@@ -595,11 +595,11 @@ export const getProductbyId = (productId) => {
 
 export const filterProductByCategory = (categoryId) => {
 
-    return new Promise((productFilter) => {
+    return new Promise((resolve) => {
 
         setTimeout(() => {
 
-            productFilter(products.filter(prod => prod.category === categoryId))
+            resolve(products.filter(prod => prod.category === categoryId))
 
         }, 1000)
 
@@ -611,11 +611,11 @@ export const filterProductByCategory = (categoryId) => {
 
 export const filterProductBySubCategory = (subCategoryId) => {
 
-    return new Promise((productFilter) => {
+    return new Promise((resolve) => {
 
         setTimeout(() => {
 
-            productFilter(products.filter(prod => prod.subcategory === subCategoryId))
+            resolve(products.filter(prod => prod.subcategory === subCategoryId))
 
         }, 1000)
 
@@ -626,12 +626,12 @@ export const filterProductBySubCategory = (subCategoryId) => {
 /* Devuelve lista de productos dependiendo de lo ingresado en el buscador */
 
 export const filterProductByInputSearch = (imputSearchId) => {
-    console.log(imputSearchId)
-    return new Promise((productFilter) => {
+
+    return new Promise((resolve) => {
 
         setTimeout(() => {
 
-            productFilter(products.filter(prod => prod.keywords.includes(imputSearchId)))
+            resolve(products.filter(prod => prod.keywords.includes(imputSearchId)))
         }, 500)
 
     })

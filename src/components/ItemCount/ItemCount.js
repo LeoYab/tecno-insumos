@@ -1,9 +1,7 @@
 import { useState } from "react";
 import "./ItemCount.scss"
 
-const ItemCount = ({ onAdd }) => {
-
-    const [funconAdd, stock] = onAdd;
+const ItemCount = ({ onAdd, stock }) => {
 
     const [value, setValue] = useState(0);
 
@@ -28,7 +26,7 @@ const ItemCount = ({ onAdd }) => {
             </div>
             <h5>Stock: {stock - value}</h5>
             <div>
-                <button id="addToCart" onClick={funconAdd} className="btn btn-outline-secondary" type="button">Agregar al carrito</button>
+                <button id="addToCart" onClick={() => onAdd(value)} className="btn btn-outline-secondary" type="button">Agregar al carrito</button>
             </div>
         </div>
     )

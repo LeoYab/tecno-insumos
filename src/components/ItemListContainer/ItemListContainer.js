@@ -33,6 +33,10 @@ const ItemListContainer = ({ greeting }) => {
         setLoading(true);
         asyncFuncProd.then(respProducts => {
             setProducts(respProducts);
+        }).catch(() => {
+            return (
+                    <h1 className="visually-hidden">ERROR</h1>
+            )
         }).finally(() => {
             setLoading(false);
         })
