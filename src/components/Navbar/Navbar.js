@@ -12,7 +12,7 @@ const Navbar = () => {
             <div className="container-fluid">
             <Link to="/" className="navbar-brand me-auto p-2"><img className="logo me-2" src={logo} alt="Logo" />Tecno-Insumos</Link>
 
-                <CartWidget />
+            <Link to="/cart" className="order-lg-1"><CartWidget /></Link>
 
                 <button className="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
                     aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
