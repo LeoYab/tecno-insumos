@@ -1,12 +1,17 @@
 import cart from "./assets/cart.svg";
 import "./CartWidget.scss";
+import { useContext } from "react";
+import { CartContext } from "../../context/CartContext"
 
 const CartWidget = () => {
 
+const { quantity } = useContext(CartContext)
+
+
     return(
-        <div className="cart m-2 d-flex order-lg-1 position-relative">
+        <div className="cart m-2 d-flex position-relative">
             <img src={cart} alt="Carrito" />
-            <p className="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-info">4</p>
+            <p id="onCart" className="position-absolute top-0 start-100 translate-middle badge rounded-pill text-bg-info">{quantity}</p>
         </div>
     )
 }

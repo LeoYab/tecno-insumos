@@ -1,0 +1,33 @@
+.card {
+    width: 18rem;
+    border-radius: 8px;
+
+    &:hover {
+        transition: 300ms;
+        box-shadow: 0 .5rem 1rem rgba(2, 2, 2, 0.200) !important;
+
+        & > .carousel-dark .carousel-control-next-icon,
+        .carousel-dark .carousel-control-prev-icon {
+            transition: 300ms;
+            opacity: 50%;
+        }
+    }
+
+    .carousel-dark .carousel-control-next-icon,
+    .carousel-dark .carousel-control-prev-icon {
+        opacity: 0%;
+    
+    }
+    &-img-top {
+        width: 50%;
+    }
+
+
+}
+
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+    background-position: 50%;
+    background-size: 50% 50%;
+}
+
