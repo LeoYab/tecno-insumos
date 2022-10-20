@@ -1,5 +1,6 @@
 import { useState, useEffect, createContext } from "react";
 
+
 export const CartContext = createContext({
     cart: [],
     quantity: 0,

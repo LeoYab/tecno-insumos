@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import "./ItemDetail.scss"
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-
+import { NotificationContext } from "../../Notifications/NotificationsServices";
 
 const ItemDetail = ({ id, img, img2, price, name, description, stock, info }) => {
 
@@ -13,6 +13,7 @@ const ItemDetail = ({ id, img, img2, price, name, description, stock, info }) =>
 
     const { addItem } = useContext(CartContext)
 
+const { ntfyAddItem } = useContext(NotificationContext)
 
     const handleOnAdd = (quantity) => {
      
@@ -22,7 +23,8 @@ const ItemDetail = ({ id, img, img2, price, name, description, stock, info }) =>
 
         setTotProd(quantity)
 
-
+        ntfyAddItem(name)
+    
     }
 
 
