@@ -2,6 +2,7 @@ import './App.scss';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import HeroSlider from "./components/HeroSlider/HeroSlider";
 import Cart from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext"

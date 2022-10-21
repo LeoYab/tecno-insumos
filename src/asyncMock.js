@@ -7,7 +7,7 @@ const products = [
         stock: 3,
         category: "cpu",
         subcategory: "c_amd",
-        keywords: "athlon 3000g",
+        keywords: "athlon 3000g amd",
         img: "/images/CPUs/AMD/Athlon 3000G YD3000C6FHBOX_1.webp",
         img2: "/images/CPUs/AMD/Athlon 3000G YD3000C6FHBOX_2.webp",
         info: "Ideal para navegar por Internet con rapidez, transmitir videos en tiempo real sin un solo corte y jugar a los juegos más populares en alta definición de 720p.--Memoria caché de 4 MB, rápida y volátil.--Procesador gráfico Radeon Vega 3 Graphics.--Su potencia es de 35 W.--Cuenta con 4 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
@@ -20,7 +20,7 @@ const products = [
         stock: 5,
         category: "cpu",
         subcategory: "c_amd",
-        keywords: "ryzen 5 5600g",
+        keywords: "ryzen 5 5600g amd",
         img: "/images/CPUs/AMD/Ryzen 5 5600G 100000252BOX_1.webp",
         img2: "/images/CPUs/AMD/Ryzen 5 5600G 100000252BOX_2.webp",
         info: "Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.--Memoria caché de 16 MB, rápida y volátil.--Procesador gráfico Radeon Graphics.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con 12 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
@@ -33,7 +33,7 @@ const products = [
         stock: 4,
         category: "cpu",
         subcategory: "c_amd",
-        keywords: "ryzen 7 5700g",
+        keywords: "ryzen 7 5700g amd",
         img: "/images/CPUs/AMD/Ryzen 7 5700G 100000263BOX_1.webp",
         img2: "/images/CPUs/AMD/Ryzen 7 5700G 100000263BOX_2.webp",
         info: "Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.--Memoria caché de 16 MB, rápida y volátil.--Procesador gráfico Radeon Graphics.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con 16 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
@@ -46,7 +46,7 @@ const products = [
         stock: 6,
         category: "cpu",
         subcategory: "c_intel",
-        keywords: "core i3 10100",
+        keywords: "core i3 10100 intel",
         img: "/images/CPUs/Intel/Core i3 10100 BX8070110100_1.webp",
         img2: "/images/CPUs/Intel/Core i3 10100 BX8070110100_2.webp",
         info: "Producto eficiente y de rendimiento estándar en programas de edición de video, contenido y juegos.--Memoria caché de 6 MB, rápida y volátil.--Procesador gráfico Intel UHD Graphics 630.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo, al dividir el procesador físico en dos procesadores lógicos.--Producto en empaque original.--Procesador avanzado de alto desempeño y marca líder en el rubro."
@@ -59,7 +59,7 @@ const products = [
         stock: 8,
         category: "cpu",
         subcategory: "c_intel",
-        keywords: "core i5 6500",
+        keywords: "core i5 6500 intel",
         img: "/images/CPUs/Intel/Core i5 6500 CM8066201920404_1.webp",
         img2: "/images/CPUs/Intel/Core i5 6500 CM8066201920404_2.webp",
         info: "Ejecuta programas de edición de videos, creación de contenido, streaming y videojuegos sin afectar el rendimiento del dispositivo.--Memoria caché de 6 MB, rápida y volátil.--Procesador gráfico Intel HD Graphics 530.--Soporta memoria RAM DDR3L, DDR4.--Su potencia es de 35 W.--Cuenta con 4 hilos que favorecen la ejecución de múltiples programas a la vez.--Procesador avanzado de alto desempeño y marca líder en el rubro."
@@ -72,7 +72,7 @@ const products = [
         stock: 7,
         category: "cpu",
         subcategory: "c_intel",
-        keywords: "core i7 10700F",
+        keywords: "core i7 10700F intel",
         img: "/images/CPUs/Intel/Core i7 10700F BX8070110700F_1.webp",
         img2: "/images/CPUs/Intel/Core i7 10700F BX8070110700F_2.webp",
         info: "Producto de alto rendimiento y línea exclusiva para profesionales que ejecutan muchos programas a la vez.--Memoria caché de 16 MB, rápida y volátil.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo, al dividir el procesador físico en dos procesadores lógicos.--Producto en empaque original.--Procesador avanzado de alto desempeño y marca líder en el rubro."
@@ -124,7 +124,7 @@ const products = [
         stock: 5,
         category: "discos",
         subcategory: "d_hdd",
-        keywords: "wd purple 2tb",
+        keywords: "wd purple 2tb western digital",
         img: "/images/Discos/HDD/WD/Western Digital WD Purple WD20PURX 2TB purpura_1.webp",
         img2: "/images/Discos/HDD/WD/Western Digital WD Purple WD20PURX 2TB purpura_2.webp",
         info: ""
@@ -137,7 +137,7 @@ const products = [
         stock: 16,
         category: "discos",
         subcategory: "d_hdd",
-        keywords: "wd Blue 2tb",
+        keywords: "wd Blue 2tb western digital",
         img: "/images/Discos/HDD/WD/Western Digital WD20EZRZ 2TB_1.webp",
         img2: "/images/Discos/HDD/WD/Western Digital WD20EZRZ 2TB_2.webp",
         info: ""
@@ -150,7 +150,7 @@ const products = [
         stock: 25,
         category: "discos",
         subcategory: "d_hdd",
-        keywords: "wd blue 1tb",
+        keywords: "wd blue 1tb western digital",
         img: "/images/Discos/HDD/WD/Western Digital WD10EZEX  1TB Caviar_1.webp",
         img2: "/images/Discos/HDD/WD/Western Digital WD10EZEX  1TB Caviar_2.webp",
         info: ""
@@ -631,7 +631,7 @@ export const filterProductByInputSearch = (imputSearchId) => {
 
         setTimeout(() => {
 
-            resolve(products.filter(prod => prod.keywords.includes(imputSearchId)))
+            resolve(products.filter(prod => prod.keywords.includes(imputSearchId.toLowerCase())))
         }, 500)
 
     })

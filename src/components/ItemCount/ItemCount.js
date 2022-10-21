@@ -36,15 +36,15 @@ const ItemCount = ({ onAdd, stock }) => {
 
 
     return (
-        <div>
+        <div className="m-2">
             <div className="input-group mb-3 mt-3 justify-content-center">
-                <button onClick={decrement} className="btn btn-outline-secondary" type="button" disabled={disableButtonDecrement}>-</button>
+                <button onClick={decrement} className="btn btn-outline-dark" type="button" disabled={disableButtonDecrement}>-</button>
                 <input type="text" id="inputCart" className="form-control text-center" value={value} disabled />
-                <button onClick={increment} className="btn btn-outline-secondary" type="button" disabled={disableButtonIncrement}>+</button>
+                <button onClick={increment} className="btn btn-outline-dark" type="button" disabled={disableButtonIncrement}>+</button>
             </div>
             <h5>Stock: {stock - value}</h5>
             <div>
-                <button id="addToCart" onClick={() => onAdd(value)} className="btn btn-outline-secondary" type="button" disabled={disableButtonAdd}>Agregar al carrito</button>
+                <button id="addToCart" onClick={() => onAdd(value)} className="btn btn-outline-success" type="button" disabled={disableButtonAdd}>Agregar al carrito</button>
             </div>
         </div>
     )

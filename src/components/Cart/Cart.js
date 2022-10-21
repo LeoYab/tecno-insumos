@@ -1,4 +1,5 @@
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
 import { NotificationContext } from "../../Notifications/NotificationsServices"
 
@@ -22,10 +23,9 @@ const Cart = () => {
 
         return (
             <tr>
-                <td></td>
-                <td className="text-center">Carrito Vacío</td>
-                <td></td>
+                <td className="text-center" colSpan="4">Carrito Vacío</td>
             </tr>
+            
         )
     }
 
@@ -44,7 +44,6 @@ const Cart = () => {
         )
     })
 
-    console.log(totalItems)
     return (
         <div className="d-flex flex-column align-items-center mt-2">
             <table className="table table-striped w-50 text-start">
@@ -61,7 +60,7 @@ const Cart = () => {
                 </tbody>
             </table>
             <div className="w-50 text-end">
-                <h2>Total: ${totalItems}</h2>
+                <h2>{totalItems !== 0 ? "Precio: $" + totalItems :  <Link to="/"><h5>Ir a comprar</h5></Link>}</h2>
             </div>
         </div>
 
