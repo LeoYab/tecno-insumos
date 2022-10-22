@@ -1,3 +1,4 @@
+import "./NotificationsServices.scss"
 import Swal from "sweetalert2";
 import { createContext } from "react"
 

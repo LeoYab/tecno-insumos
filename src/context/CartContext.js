@@ -77,10 +77,16 @@ cart.forEach(prod => {
     }
 
     
+    const prodsAdded = (id) =>{
+
+        const prodadded = cart.find(prod => prod.id === id)
+       return prodadded?.quantity 
+       
+    }
     
 
     return (
-        <CartContext.Provider value={{ cart, quantity, addItem, removeProd, totalItems }}>
+        <CartContext.Provider value={{ cart, quantity, addItem, removeProd, totalItems, prodsAdded }}>
             {children}
         </CartContext.Provider>
 

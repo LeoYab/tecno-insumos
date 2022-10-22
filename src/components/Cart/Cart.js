@@ -50,9 +50,8 @@ const Cart = () => {
                 <thead className="table-dark">
                     <tr>
                         <th scope="col">Nombre</th>
-                        <th scope="col" className="text-center">Precio</th>
-                        <th scope="col">Cantidad</th>
-                        <th scope="col"></th>
+                        <th scope="col" className="text-center">Cantidad</th>
+                        <th scope="col" colSpan="2">Precio</th>
                     </tr>
                 </thead>
                 <tbody className="align-middle">
