@@ -5,26 +5,31 @@ import { Link } from "react-router-dom";
 import "./ItemDetail.scss"
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
-
+import { NotificationContext } from "../../Notifications/NotificationsServices";
 
 const ItemDetail = ({ id, img, img2, price, name, description, stock, info }) => {
 
     const [totProd, setTotProd] = useState(0)
 
-    const { addItem } = useContext(CartContext)
+    const { addItem, prodsAdded } = useContext(CartContext)
 
+    const { ntfyAddItem } = useContext(NotificationContext)
 
     const handleOnAdd = (quantity) => {
-     
-       const addProdToCart = { id, name, price, quantity }
+
+        const addProdToCart = { id, name, price, quantity }
 
         addItem(addProdToCart)
 
         setTotProd(quantity)
 
+        ntfyAddItem(name)
+
+        
 
     }
 
+const quantityAdded = prodsAdded(id)
 
     return (
 
@@ -56,10 +61,11 @@ const ItemDetail = ({ id, img, img2, price, name, description, stock, info }) =>
                 <div className="col-4 bg-light border rounded">
                     <h1 className="mb-4 fw-bold">{name}</h1>
                     <p className="mb-4">{description}</p>
+                    <p className="m-3 mb-4 infoDetail"><small>{info}</small></p>
                     <h2>${price}</h2>
 
-                    {totProd ? <Link to="/cart"><Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Terminar Compra</Button></Link> : <ItemCount onAdd={handleOnAdd} stock={stock}/>}
-
+                    {totProd ? <Link to="/cart"><Button type="button" className="btn btn-outline-success mb-2 col-8 align-self-center">Terminar compra</Button></Link> : <ItemCount onAdd={handleOnAdd} stock={stock} initial={quantityAdded} />}
+                    {totProd ? <Link to="/"><Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Seguir comprando</Button></Link> : ""}
                 </div>
             </div>
 

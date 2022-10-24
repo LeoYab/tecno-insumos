@@ -2,9 +2,11 @@ import './App.scss';
 import Navbar from './components/Navbar/Navbar';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import HeroSlider from "./components/HeroSlider/HeroSlider";
 import Cart from './components/Cart/Cart';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext"
+import { NotificationsServices} from "./Notifications/NotificationsServices"
 
 function App() {
 
@@ -12,34 +14,37 @@ function App() {
 
     <div className="App">
 
-      <CartProvider>
+      <NotificationsServices>
 
-        <BrowserRouter>
+        <CartProvider>
 
-          <Navbar />
+          <BrowserRouter>
 
-          <Routes>
+            <Navbar />
 
-            <Route path="/" element={<ItemListContainer greeting={
-              {
-                dia: "Buenos días",
-                tarde: "Buenas tardes",
-                noche: "Buenas noches"
-              }
-            } />} />
+            <Routes>
 
-            <Route path="/category/:categoryId" element={<ItemListContainer />} />
-            <Route path="/category/:categoryId/:subcategoryId" element={<ItemListContainer />} />
-            <Route path="/item/:productId" element={<ItemDetailContainer />} />
-            <Route path="/search/:imputSearchId" element={<ItemListContainer />} />
-            <Route path="/cart" element={<Cart />} />
-            <Route path="*" element={<h1>404 NOT FOUND</h1>} />
-          </Routes>
+              <Route path="/" element={<ItemListContainer greeting={
+                {
+                  dia: "Buenos días",
+                  tarde: "Buenas tardes",
+                  noche: "Buenas noches"
+                }
+              } />} />
 
-        </BrowserRouter>
+              <Route path="/category/:categoryId" element={<ItemListContainer />} />
+              <Route path="/category/:categoryId/:subcategoryId" element={<ItemListContainer />} />
+              <Route path="/item/:productId" element={<ItemDetailContainer />} />
+              <Route path="/search/:imputSearchId" element={<ItemListContainer />} />
+              <Route path="/cart" element={<Cart />} />
+              <Route path="*" element={<h1>404 NOT FOUND</h1>} />
+            </Routes>
 
-      </CartProvider>
+          </BrowserRouter>
 
+        </CartProvider>
+
+      </NotificationsServices>
     </div>
   );
 }

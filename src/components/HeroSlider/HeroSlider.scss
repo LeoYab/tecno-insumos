@@ -1,0 +1,47 @@
+
+#heroSlider .carousel {
+    &-indicators [data-bs-target] {
+        width: 8px;
+        height: 8px;
+        border-radius: 50px;
+        border: 0;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    &-control {
+
+        &-next {
+
+            width: 1.8%;
+
+            &-icon {
+                background-color: gray;
+                border-radius: 50px 0px 0px 50px;
+            }
+        }
+
+        &-prev {
+            
+            width: 1.8%;
+
+            &-icon {
+                background-color: gray;
+                border-radius: 0px 50px 50px 0px;
+            }
+        }
+
+
+
+
+
+    }
+
+
+}
+
+@media (max-width: 900px) {
+    #heroSlider {
+        display: none;
+    }
+}
