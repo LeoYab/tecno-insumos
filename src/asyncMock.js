@@ -1,3 +1,6 @@
+import { doc, addDoc, collection } from "firebase/firestore"
+import { db } from "./services/firebase"
+
 const products = [
     {
         id: "1",
@@ -561,6 +564,12 @@ const products = [
 
 ]
 
+
+/* products.forEach(async prod => {
+await addDoc(collection(db, "products"))
+ addDoc(prod)
+})
+ */
 /* Devuelve lista completa de productos */
 
 export const getProducts = () => {

@@ -4,6 +4,8 @@ import HeroSlider from '../HeroSlider/HeroSlider'
 import ItemList from '../ItemList/ItemList'
 import "../ItemListContainer/ItemListContainer.scss"
 import { useParams } from 'react-router-dom'
+import { getDocs, collection } from 'firebase/firestore'
+import { db } from '../../services/firebase'
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -28,23 +30,36 @@ const ItemListContainer = ({ greeting }) => {
    
     useEffect(() => {
        
+
+        const collectionRef = collection(db, "products")
         /* UseEffect en donde trae el filtrado de productos dependiendo de qué parámetro esté activo. Sino muestra la totalidad de productos */
 
-        const asyncFuncProd = imputSearchId ? filterProductByInputSearch(imputSearchId) : (categoryId ? (subcategoryId ? filterProductBySubCategory(subcategoryId) : filterProductByCategory(categoryId)) : getProducts());
+      /*   const asyncFuncProd = imputSearchId ? filterProductByInputSearch(imputSearchId) : (categoryId ? (subcategoryId ? filterProductBySubCategory(subcategoryId) : filterProductByCategory(categoryId)) : getProducts()); */
         setLoading(true);
 
       
-        asyncFuncProd.then(respProducts => {
-            setProducts(respProducts);
+        getDocs(collectionRef).then(respProducts => {
+        
+            const productsAdapted = respProducts.docs.map(doc => {
+            const data = doc.data()
+
+            return{id: doc.id, ...data}
+
+        })
+
+        setProducts(productsAdapted);
+
         }).catch(() => {
+
             return (
                 <h1 className="visually-hidden">ERROR</h1>
             )
+            
         }).finally(() => {
             setLoading(false);
         })
 
-    }, [categoryId, subcategoryId, imputSearchId])
+    }, [/* categoryId, subcategoryId, imputSearchId */])
 
     /* Si es verdadero muestra el spinner de carga*/
 
