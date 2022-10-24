@@ -13,7 +13,7 @@ const products = [
         keywords: "athlon 3000g amd",
         img: "/images/CPUs/AMD/Athlon 3000G YD3000C6FHBOX_1.webp",
         img2: "/images/CPUs/AMD/Athlon 3000G YD3000C6FHBOX_2.webp",
-        info: "Ideal para navegar por Internet con rapidez, transmitir videos en tiempo real sin un solo corte y jugar a los juegos más populares en alta definición de 720p.--Memoria caché de 4 MB, rápida y volátil.--Procesador gráfico Radeon Vega 3 Graphics.--Su potencia es de 35 W.--Cuenta con 4 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
+        info: "--Ideal para navegar por Internet con rapidez, transmitir videos en tiempo real sin un solo corte y jugar a los juegos más populares en alta definición de 720p.--Memoria caché de 4 MB, rápida y volátil.--Procesador gráfico Radeon Vega 3 Graphics.--Su potencia es de 35 W.--Cuenta con 4 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
     },
     {
         id: "2",
@@ -26,7 +26,7 @@ const products = [
         keywords: "ryzen 5 5600g amd",
         img: "/images/CPUs/AMD/Ryzen 5 5600G 100000252BOX_1.webp",
         img2: "/images/CPUs/AMD/Ryzen 5 5600G 100000252BOX_2.webp",
-        info: "Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.--Memoria caché de 16 MB, rápida y volátil.--Procesador gráfico Radeon Graphics.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con 12 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
+        info: "--Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.--Memoria caché de 16 MB, rápida y volátil.--Procesador gráfico Radeon Graphics.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con 12 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
     },
     {
         id: "3",
@@ -39,7 +39,7 @@ const products = [
         keywords: "ryzen 7 5700g amd",
         img: "/images/CPUs/AMD/Ryzen 7 5700G 100000263BOX_1.webp",
         img2: "/images/CPUs/AMD/Ryzen 7 5700G 100000263BOX_2.webp",
-        info: "Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.--Memoria caché de 16 MB, rápida y volátil.--Procesador gráfico Radeon Graphics.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con 16 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
+        info: "--Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.--Memoria caché de 16 MB, rápida y volátil.--Procesador gráfico Radeon Graphics.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con 16 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
     },
     {
         id: "4",
@@ -52,7 +52,7 @@ const products = [
         keywords: "core i3 10100 intel",
         img: "/images/CPUs/Intel/Core i3 10100 BX8070110100_1.webp",
         img2: "/images/CPUs/Intel/Core i3 10100 BX8070110100_2.webp",
-        info: "Producto eficiente y de rendimiento estándar en programas de edición de video, contenido y juegos.--Memoria caché de 6 MB, rápida y volátil.--Procesador gráfico Intel UHD Graphics 630.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo, al dividir el procesador físico en dos procesadores lógicos.--Producto en empaque original.--Procesador avanzado de alto desempeño y marca líder en el rubro."
+        info: "--Producto eficiente y de rendimiento estándar en programas de edición de video, contenido y juegos.--Memoria caché de 6 MB, rápida y volátil.--Procesador gráfico Intel UHD Graphics 630.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo, al dividir el procesador físico en dos procesadores lógicos.--Producto en empaque original.--Procesador avanzado de alto desempeño y marca líder en el rubro."
     },
     {
         id: "5",
@@ -65,7 +65,7 @@ const products = [
         keywords: "core i5 6500 intel",
         img: "/images/CPUs/Intel/Core i5 6500 CM8066201920404_1.webp",
         img2: "/images/CPUs/Intel/Core i5 6500 CM8066201920404_2.webp",
-        info: "Ejecuta programas de edición de videos, creación de contenido, streaming y videojuegos sin afectar el rendimiento del dispositivo.--Memoria caché de 6 MB, rápida y volátil.--Procesador gráfico Intel HD Graphics 530.--Soporta memoria RAM DDR3L, DDR4.--Su potencia es de 35 W.--Cuenta con 4 hilos que favorecen la ejecución de múltiples programas a la vez.--Procesador avanzado de alto desempeño y marca líder en el rubro."
+        info: "--Ejecuta programas de edición de videos, creación de contenido, streaming y videojuegos sin afectar el rendimiento del dispositivo.--Memoria caché de 6 MB, rápida y volátil.--Procesador gráfico Intel HD Graphics 530.--Soporta memoria RAM DDR3L, DDR4.--Su potencia es de 35 W.--Cuenta con 4 hilos que favorecen la ejecución de múltiples programas a la vez.--Procesador avanzado de alto desempeño y marca líder en el rubro."
     },
     {
         id: "6",
@@ -78,7 +78,7 @@ const products = [
         keywords: "core i7 10700F intel",
         img: "/images/CPUs/Intel/Core i7 10700F BX8070110700F_1.webp",
         img2: "/images/CPUs/Intel/Core i7 10700F BX8070110700F_2.webp",
-        info: "Producto de alto rendimiento y línea exclusiva para profesionales que ejecutan muchos programas a la vez.--Memoria caché de 16 MB, rápida y volátil.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo, al dividir el procesador físico en dos procesadores lógicos.--Producto en empaque original.--Procesador avanzado de alto desempeño y marca líder en el rubro."
+        info: "--Producto de alto rendimiento y línea exclusiva para profesionales que ejecutan muchos programas a la vez.--Memoria caché de 16 MB, rápida y volátil.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo, al dividir el procesador físico en dos procesadores lógicos.--Producto en empaque original.--Procesador avanzado de alto desempeño y marca líder en el rubro."
     },
     {
         id: "7",
@@ -91,7 +91,7 @@ const products = [
         keywords: "seagate barracuda 1tb",
         img: "/images/Discos/HDD/Seagate/Seagate Barracuda ST1000DM010 1TB_1.webp",
         img2: "/images/Discos/HDD/Seagate/Seagate Barracuda ST1000DM010 1TB_2.webp",
-        info: ""
+        info: "--Útil para guardar programas y documentos con su capacidad de 1 TB.--Tamaño de 3.5.--Interfaz de conexión: SATA III.--Apto para PC, Servidor y DAS.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
         id: "8",
@@ -104,7 +104,7 @@ const products = [
         keywords: "seagate barracuda 2tb",
         img: "/images/Discos/HDD/Seagate/Seagate Barracuda ST2000DM008 2TB plata_1.webp",
         img2: "/images/Discos/HDD/Seagate/Seagate Barracuda ST2000DM008 2TB plata_2.webp",
-        info: ""
+        info: "--Útil para guardar programas y documentos con su capacidad de 2 TB.--Tamaño de 3.5.--Interfaz de conexión: SATA III.--Apto para PC, Servidor y DAS.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
         id: "9",
@@ -117,7 +117,7 @@ const products = [
         keywords: "toshiba series 500gb",
         img: "/images/Discos/HDD/Toshiba/Toshiba MQ01ABD Series MQ01ABD050 500GB_1.webp",
         img2: "/images/Discos/HDD/Toshiba/Toshiba MQ01ABD Series MQ01ABD050 500GB_2.webp",
-        info: ""
+        info: "--Útil para guardar programas y documentos con su capacidad de 500 GB.--Tamaño de 2.5.--Interfaz de conexión: SATA III.--Apto para Consola de videojuegos, DVR, PC y Notebook.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
         id: "10",
@@ -130,7 +130,7 @@ const products = [
         keywords: "wd purple 2tb western digital",
         img: "/images/Discos/HDD/WD/Western Digital WD Purple WD20PURX 2TB purpura_1.webp",
         img2: "/images/Discos/HDD/WD/Western Digital WD Purple WD20PURX 2TB purpura_2.webp",
-        info: ""
+        info: "--Útil para guardar programas y documentos con su capacidad de 2 TB.--Tamaño de 3.5.--Interfaz de conexión: SATA III.--Apto para NVR.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
         id: "11",
@@ -143,7 +143,7 @@ const products = [
         keywords: "wd Blue 2tb western digital",
         img: "/images/Discos/HDD/WD/Western Digital WD20EZRZ 2TB_1.webp",
         img2: "/images/Discos/HDD/WD/Western Digital WD20EZRZ 2TB_2.webp",
-        info: ""
+        info: "--Útil para guardar programas y documentos con su capacidad de 2 TB.--Tamaño de 3.5.--Es compatible con Windows, MacOS.--Interfaz de conexión: SATA III.--Apto para PC.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
         id: "12",
@@ -156,7 +156,7 @@ const products = [
         keywords: "wd blue 1tb western digital",
         img: "/images/Discos/HDD/WD/Western Digital WD10EZEX  1TB Caviar_1.webp",
         img2: "/images/Discos/HDD/WD/Western Digital WD10EZEX  1TB Caviar_2.webp",
-        info: ""
+        info: "--Útil para guardar programas y documentos con su capacidad de 1 TB.--Tamaño de 3.5.--Es compatible con Windows, MacOS.--Interfaz de conexión: SATA III.--Apto para PC.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
         id: "13",
@@ -169,11 +169,11 @@ const products = [
         keywords: "gigabyte 240gb",
         img: "/images/Discos/SSD/Gigabyte/Gigabyte GP-GSTFS31240GNTD 240GB_1.webp",
         img2: "/images/Discos/SSD/Gigabyte/Gigabyte GP-GSTFS31240GNTD 240GB_2.webp",
-        info: ""
+        info: "--Con tecnología 3D NAND.--Útil para guardar programas y documentos con su capacidad de 240 GB.--Resistente a fuertes golpes.--Tamaño de 2.5.--Interfaz de conexión: SATA III.--Apto para PC y Notebook.--Las imágenes pueden ser ilustrativas."
     },
     {
         id: "14",
-        name: "Kingston 480G ",
+        name: "Kingston 480G",
         description: "Kingston SA400S37 480GB",
         price: 8300,
         stock: 20,
@@ -182,7 +182,7 @@ const products = [
         keywords: "kingston 480g ",
         img: "/images/Discos/SSD/Kingston/Kingston SA400S37 480G 480GB_1.webp",
         img2: "/images/Discos/SSD/Kingston/Kingston SA400S37 480G 480GB_2.webp",
-        info: ""
+        info: "--Con tecnología 3D NAND.--Útil para guardar programas y documentos con su capacidad de 480 GB.--Resistente a fuertes golpes.--Tamaño de 2.5.--Interfaz de conexión: SATA III.--Apto para PC y Notebook.--Las imágenes pueden ser ilustrativas."
     },
     {
         id: "15",
@@ -195,7 +195,7 @@ const products = [
         keywords: "samsung 870 evo500gb",
         img: "/images/Discos/SSD/Samsung/Samsung 870 EVO MZ-77E500 500GB negro_1.webp",
         img2: "/images/Discos/SSD/Samsung/Samsung 870 EVO MZ-77E500 500GB negro_2.webp",
-        info: ""
+        info: "--Útil para guardar programas y documentos con su capacidad de 500 GB.Tamaño de 2.5.Es compatible con Windows, MacOS, Linux.--Interfaces de conexión: SATA III y SATA II.--Apto para PC.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
         id: "16",
@@ -208,7 +208,7 @@ const products = [
         keywords: "corsair vengance 16gb",
         img: "/images/Memorias/Corsair/Vengeance LPX gamer color negro 16GB 2 Corsair CMK16GX4M2B3200C16_1.webp",
         img2: "/images/Memorias/Corsair/Vengeance LPX gamer color negro 16GB 2 Corsair CMK16GX4M2B3200C16_2.webp",
-        info: ""
+        info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 DRAM.--Memoria con formato UDIMM.--Alcanza una velocidad de 3600 MHz.--Apta para computadoras de escritorio.--Línea Vengeance RGB RS.--Cuenta con una tasa de transferencia de 28800 MB/s.--Compatible con AMD, Intel."
     },
     {
         id: "17",
@@ -221,7 +221,7 @@ const products = [
         keywords: "corsair select 8gb",
         img: "/images/Memorias/Corsair/Value Select color verde 8GB 1 Corsair CMSO8GX3M1C1600C11_1.webp",
         img2: "/images/Memorias/Corsair/Value Select color verde 8GB 1 Corsair CMSO8GX3M1C1600C11_2.webp",
-        info: ""
+        info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4.--Memoria con formato SODIMM.--Alcanza una velocidad de 2133 MHz.--Apta para notebooks.--Línea Value Select.--Cuenta con una tasa de transferencia de 17000 MB/s.--Compatible con Intel Core 6° generación."
     },
     {
         id: "18",
@@ -234,7 +234,7 @@ const products = [
         keywords: "corsair vengeance rgb pro gamer 16gb",
         img: "/images/Memorias/Corsair/Vengeance RGB Pro gamer color negro 16GB 2 Corsair CMW16GX4M2D3600C18_1.webp",
         img2: "/images/Memorias/Corsair/Vengeance RGB Pro gamer color negro 16GB 2 Corsair CMW16GX4M2D3600C18_2.webp",
-        info: ""
+        info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 DRAM.--Memoria con formato DIMM.--Alcanza una velocidad de 2666 MHz.--Apta para computadoras de escritorio.--Línea Vengeance RGB Pro.--Cuenta con una tasa de transferencia de 21300 MB/s.--Compatible con AMD Ryzen, Intel."
     },
     {
         id: "19",
@@ -247,7 +247,7 @@ const products = [
         keywords: "g.skill trident z royal 16gb ddr4",
         img: "/images/Memorias/Gskill/Gskill Trident Z Royal Ddr4 3600mhz Rgb_1.webp",
         img2: "/images/Memorias/Gskill/Gskill Trident Z Royal Ddr4 3600mhz Rgb_2.webp",
-        info: ""
+        info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 DRAM.--Memoria con formato UDIMM.--Apta para computadoras de escritorio.--Línea Trident Z Royal.--Cuenta con una tasa de transferencia de 32000 MB/s.--Compatible con AMD, Intel."
     },
     {
         id: "20",
@@ -260,7 +260,7 @@ const products = [
         keywords: "g.skill trident z 16gb",
         img: "/images/Memorias/Gskill/G.Skill Trident Z RGB gamer color negro 16GB 2_1.webp",
         img2: "/images/Memorias/Gskill/G.Skill Trident Z RGB gamer color negro 16GB 2_2.webp",
-        info: ""
+        info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4.--Memoria con formato UDIMM.--Alcanza una velocidad de 3200 MHz.--Apta para computadoras de escritorio.--Línea Trident Z RGB.--Cuenta con una tasa de transferencia de 25600 MB/s."
     },
     {
         id: "21",
@@ -273,7 +273,7 @@ const products = [
         keywords: "kingston fury beast 8gb",
         img: "/images/Memorias/Kingston/Kingston  Fury Beast DDR4 gamer color negro 8GB_1.webp",
         img2: "/images/Memorias/Kingston/Kingston  Fury Beast DDR4 gamer color negro 8GB_2.webp",
-        info: ""
+        info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 SDRAM.--Memoria con formato UDIMM.--Alcanza una velocidad de 3200 MHz.--Apta para computadoras de escritorio.--Línea Fury Beast DDR4.--Cuenta con una tasa de transferencia de 25600 MB/s.--Compatible con AMD Ryzen."
     },
     {
         id: "22",
@@ -286,7 +286,7 @@ const products = [
         keywords: "kingston valueram 8gb",
         img: "/images/Memorias/Kingston/Kingston KVR16N11 8WP_1.webp",
         img2: "/images/Memorias/Kingston/Kingston KVR16N11 8WP_2.webp",
-        info: ""
+        info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 SDRAM.--Memoria con formato DIMM.--Alcanza una velocidad de 2666 MHz.--Apta para computadoras de escritorio.--Línea ValueRAM.--Cuenta con una tasa de transferencia de 21300 MB/s."
     },
     {
         id: "23",
@@ -299,7 +299,7 @@ const products = [
         keywords: "kingston valueram 8gb",
         img: "/images/Memorias/Kingston/Kingston ValueRAM color verde 8GB_1.webp",
         img2: "/images/Memorias/Kingston/Kingston ValueRAM color verde 8GB_2.webp",
-        info: ""
+        info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 SDRAM.--Memoria con formato DIMM.--Alcanza una velocidad de 2666 MHz.--Apta para computadoras de escritorio.--Línea ValueRAM.--Cuenta con una tasa de transferencia de 21300 MB/s."
     },
     {
         id: "24",
@@ -312,7 +312,7 @@ const products = [
         keywords: "kingston valueram 8gb",
         img: "/images/Memorias/Kingston/ValueRAM color verde 16GB 1 Kingston KVR26S19D8 16_1.webp",
         img2: "/images/Memorias/Kingston/ValueRAM color verde 16GB 1 Kingston KVR26S19D8 16_2.webp",
-        info: ""
+        info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 SDRAM.--Memoria con formato DIMM.--Alcanza una velocidad de 2666 MHz.--Apta para computadoras de escritorio.--Línea ValueRAM.--Cuenta con una tasa de transferencia de 21300 MB/s."
     },
     {
         id: "25",
@@ -325,7 +325,7 @@ const products = [
         keywords: "asrock b450",
         img: "/images/Motherboards/Asrock/Asrock Mb Am4 B450 Steel Legend 6 Pci Gamer_1.webp",
         img2: "/images/Motherboards/Asrock/Asrock Mb Am4 B450 Steel Legend 6 Pci Gamer_2.webp",
-        info: ""
+        info: "--Plataforma: AMD.--Chipsets: AMD B450.--Ranuras de expansión: 1 x PCI Express x16 (x16 mode),1 x PCI Express x16 slot (x4 mode),1 x PCI Express x1.--CPU: AMD.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 64 GB.--Socket: AM4."
     },
     {
         id: "26",
@@ -338,7 +338,7 @@ const products = [
         keywords: "asrock z390 phantom gaming",
         img: "/images/Motherboards/Asrock/Asrock Z390 Phantom Gaming Lga 1151 M2 Oem Pcreg_1.webp",
         img2: "/images/Motherboards/Asrock/Asrock Z390 Phantom Gaming Lga 1151 M2 Oem Pcreg_2.webp",
-        info: ""
+        info: "--Plataforma: Intel.--Chipsets: z390.--Ranuras de expansión: 5 PCIe.--CPU: intel.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: 1151.--Tipo de memoria RAM: DDR4"
     },
     {
         id: "27",
@@ -351,7 +351,7 @@ const products = [
         keywords: "asus a520m-k",
         img: "/images/Motherboards/Asus/Asus A520m-k Am4 Ryzen 3ra Gen Hdmi M.2_1.webp",
         img2: "/images/Motherboards/Asus/Asus A520m-k Am4 Ryzen 3ra Gen Hdmi M.2_2.webp",
-        info: ""
+        info: "--Plataforma: AMD.--Chipsets: A520.--Ranuras de expansión: 1 x PCI Express 3.0 x16 (x16 mode),2 x PCI Express x1.--CPU: Ryzen.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 64 GB.--Socket: AM4"
     },
     {
         id: "28",
@@ -364,7 +364,7 @@ const products = [
         keywords: "asus prime a320m-k",
         img: "/images/Motherboards/Asus/Asus Prime A320m-k Am4 Ddr4 Usb 3.0 Hdmi A320_1.webp",
         img2: "/images/Motherboards/Asus/Asus Prime A320m-k Am4 Ddr4 Usb 3.0 Hdmi A320_2.webp",
-        info: ""
+        info: "--Plataforma: AMD.--Chipsets: AMD A320.--Ranuras de expansión: 2 x PCI Express 2.0 x1.--CPU: AMD.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 32 GB.--Socket: AM4."
     },
     {
         id: "29",
@@ -377,7 +377,7 @@ const products = [
         keywords: "asus rog strix b550-f",
         img: "/images/Motherboards/Asus/Asus Rog Strix B550-f Gaming Wi-fi Am4 3ra Gen_1.webp",
         img2: "/images/Motherboards/Asus/Asus Rog Strix B550-f Gaming Wi-fi Am4 3ra Gen_2.webp",
-        info: ""
+        info: "--Plataforma: AMD.--Chipsets: AMD B550.--Ranuras de expansión: 1 x PCIe 3.0 x16,1 x PCIe 4.0 x16 (x16 mode),3 x PCIe 3.0 x1.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: AM4.--Tipo de memoria RAM: DDR4"
     },
     {
         id: "30",
@@ -403,7 +403,7 @@ const products = [
         keywords: "gigabyte b550-ud ds3h",
         img: "/images/Motherboards/Gigabyte/Gigabyte B550 Ud Ds3h 1.0 Am4 Amd Ryzen_1.webp",
         img2: "/images/Motherboards/Gigabyte/Gigabyte B550 Ud Ds3h 1.0 Am4 Amd Ryzen_2.webp",
-        info: ""
+        info: "--Plataforma: AMD.--Chipsets: AMD X570.--Ranuras de expansión: 1 x PCIe 4.0 x16,2 x PCIe 4.0 x1.--CPU: AMD RYZEN 3RA GENERACION.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: AM4"
     },
     {
         id: "32",
@@ -416,7 +416,7 @@ const products = [
         keywords: "gigabyte h310m",
         img: "/images/Motherboards/Gigabyte/Gigabyte H310m M.2 2.0 Ddr4 9na Gen Socket 1151_1.webp",
         img2: "/images/Motherboards/Gigabyte/Gigabyte H310m M.2 2.0 Ddr4 9na Gen Socket 1151_2.webp",
-        info: ""
+        info: "--Plataforma: Intel.--Chipsets: Intel H310.--Ranuras de expansión: 1 x PCI Express x16 (x16 mode),2 x PCI Express x1.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 32 GB.--Socket: Socket 1151"
     },
     {
         id: "33",
@@ -429,7 +429,7 @@ const products = [
         keywords: "gigabyte z690",
         img: "/images/Motherboards/Gigabyte/Gigabyte Z690 Ud Ax Ddr5 Socket 1700_1.webp",
         img2: "/images/Motherboards/Gigabyte/Gigabyte Z690 Ud Ax Ddr5 Socket 1700_2.webp",
-        info: ""
+        info: "--Plataforma: Intel.--Chipsets: Z690.--Ranuras de expansión: 4xDDR4.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: 1700"
     },
     {
         id: "34",
@@ -442,7 +442,7 @@ const products = [
         keywords: "msi a320m-a pro max",
         img: "/images/Motherboards/MSI/Msi A320m-a Pro Max Amd Am4 Ryzen_1.webp",
         img2: "/images/Motherboards/MSI/Msi A320m-a Pro Max Amd Am4 Ryzen_2.webp",
-        info: ""
+        info: "--Plataforma: AMD.--Chipsets: A320.--Ranuras de expansión: Pci Express.--Aplicaciones: PC.--Capacidad máxima soportada de la memoria RAM: 32 GB.--Socket: AM4.--Tipo de memoria RAM: DDR4"
     },
     {
         id: "35",
@@ -455,7 +455,7 @@ const products = [
         keywords: "msi b450 gaming plus max",
         img: "/images/Motherboards/MSI/Msi B450 Gaming Plus Max_1.webp",
         img2: "/images/Motherboards/MSI/Msi B450 Gaming Plus Max_2.webp",
-        info: ""
+        info: "--Plataforma: AMD.--Chipsets: B450.--Ranuras de expansión: 6.--CPU: AMD.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: AM4."
     },
     {
         id: "36",
@@ -468,7 +468,7 @@ const products = [
         keywords: "msi z590 gaming carbon",
         img: "/images/Motherboards/MSI/Msi Z590 Gaming Carbon Wifi S1200 Ddr4 11va Gen_1.webp",
         img2: "/images/Motherboards/MSI/Msi Z590 Gaming Carbon Wifi S1200 Ddr4 11va Gen_2.webp",
-        info: ""
+        info: "--Plataforma: Intel.--Chipsets: Z590.--Ranuras de expansión: 3xPCIe_16,2xPCIe_1.--CPU: 10a Gen Intel ® Core ™ Procesadores,11 Gen Intel ® Core ™ procesadores Pentium ® Oro y Celeron ® procesadores 1.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: 1200."
     },
     {
         id: "37",
@@ -481,7 +481,7 @@ const products = [
         keywords: "asus tuf gaming rx 6700",
         img: "/images/VideoCards/AMD/Asus TUF Gaming Radeon RX 6700 Series TUF OC Edition 12GB_1.webp",
         img2: "/images/VideoCards/AMD/Asus TUF Gaming Radeon RX 6700 Series TUF OC Edition 12GB_2.webp",
-        info: ""
+        info: "--Interfaz PCI-Express 4.0.--Bus de memoria: 192bit.--Cantidad de núcleos: 2560.--Resolución máxima: 7680x4320.--Compatible con directX y openGL.--Requiere de 650W de alimentación.--Permite la conexión de hasta 4 pantallas simultáneas.--Formatos de conexión: HDMI 2.1, 3 DisplayPort 1.4a.--Incluye accesorios."
     },
     {
         id: "38",
@@ -494,7 +494,7 @@ const products = [
         keywords: "radeon rx 6700",
         img: "/images/VideoCards/AMD/PowerColor Red Devil Radeon RX 6700 Series 12GBD6 3DHEOC 12GB_1.webp",
         img2: "/images/VideoCards/AMD/PowerColor Red Devil Radeon RX 6700 Series 12GBD6 3DHEOC 12GB_2.webp",
-        info: ""
+        info: "--Interfaz PCI-Express 4.0.--Bus de memoria: 192bit.--Cantidad de núcleos: 2560.--Resolución máxima: 7680x4320.--Compatible con directX y openGL.--Requiere de 650W de alimentación.--Permite la conexión de hasta 4 pantallas simultáneas.--Formatos de conexión: HDMI 2.1, 3 DisplayPort 1.4a.--Incluye accesorios."
     },
     {
         id: "39",
@@ -507,7 +507,7 @@ const products = [
         keywords: "sapphire nitro+ radeon rx 6600",
         img: "/images/VideoCards/AMD/Sapphire Nitro+ Radeon RX 6600 Series RX 6600 XT 11309-01-20G 8GB_1.webp",
         img2: "/images/VideoCards/AMD/Sapphire Nitro+ Radeon RX 6600 Series RX 6600 XT 11309-01-20G 8GB_2.webp",
-        info: ""
+        info: "--Interfaz PCI-Express 4.0.--Bus de memoria: 128bit.--Cantidad de núcleos: 2048.--Frecuencia boost del núcleo de 2607MHz.--Resolución máxima: 7680x4320.--Requiere de 500W de alimentación.--Permite la conexión de hasta 4 pantallas simultáneas.--Formatos de conexión: HDMI, 3 DisplayPort 1.4."
     },
     {
         id: "40",
@@ -520,7 +520,7 @@ const products = [
         keywords: "evga geForce rtx 3080 ti",
         img: "/images/VideoCards/Nvidia/Evga FTW3 Ultra Gaming RTX 3080 Ti 12GB_1.webp",
         img2: "/images/VideoCards/Nvidia/Evga FTW3 Ultra Gaming RTX 3080 Ti 12GB_2.webp",
-        info: ""
+        info: "--Interfaz PCI-Express 4.0.--Bus de memoria: 384bit.--Cantidad de núcleos: 10240.--Frecuencia boost del núcleo de 1725MHz.--Resolución máxima: 7680x4320.--Compatible con directX y openGL.--Requiere de 750W de alimentación.--Formatos de conexión: 3 DisplayPort 1.4a, HDMI 2.1."
     },
     {
         id: "41",
@@ -533,7 +533,7 @@ const products = [
         subcategory: "v_gigabyte",
         img: "/images/VideoCards/Nvidia/Gigabyte GeForce GTX 1660 SUPEROC Edition 6GB_1.webp",
         img2: "/images/VideoCards/Nvidia/Gigabyte GeForce GTX 1660 SUPEROC Edition 6GB_2.webp",
-        info: ""
+        info: "--Interfaz PCI-Express 3.0.--Bus de memoria: 192bit.--Cantidad de núcleos: 1408.-Frecuencia boost del núcleo de 1785MHz y base de 1530MHz.--Requiere de 450W de alimentación.--Con ventiladores duales de 90 mm que mantienen la temperatura equilibrada.--Preparada para realidad virtual.--Formatos de conexión: DisplayPort, HDMI, DVI.--Incluye: Manual."
     },
     {
         id: "42",
@@ -546,7 +546,7 @@ const products = [
         subcategory: "v_msi",
         img: "/images/VideoCards/Nvidia/Nvidia MSI Ventus XS GeForce GTX 1660 OC Edition 6GB_1.webp",
         img2: "/images/VideoCards/Nvidia/Nvidia MSI Ventus XS GeForce GTX 1660 OC Edition 6GB_2.webp",
-        info: ""
+        info: "--Interfaz PCI-Express 3.0.--Bus de memoria: 192bit.--Cantidad de núcleos: 1536.--Frecuencia boost del núcleo de 1830MHz.--Resolución máxima: 7680x4320.--Compatible con directX y openGL.--Requiere de 450W de alimentación.--Permite la conexión de hasta 4 pantallas simultáneas.--Formatos de conexión: 3 DisplayPort 1.4a, HDMI 2.0b."
     },
     {
         id: "43",
@@ -559,7 +559,7 @@ const products = [
         subcategory: "v_zotac",
         img: "/images/VideoCards/Nvidia/Zotac Gaming GeForce RTX 3090  24GB_1.webp",
         img2: "/images/VideoCards/Nvidia/Zotac Gaming GeForce RTX 3090  24GB_2.webp",
-        info: ""
+        info: "--Interfaz PCI-Express 4.0.--Bus de memoria: 384bit.--Cantidad de núcleos: 10496.--Frecuencia boost del núcleo de 1695MHz.--Resolución máxima: 7680x4320.--Compatible con directX y openGL.--Requiere de 750W de alimentación.--Diseñada con IA: imágenes más nítidas y óptimas.--Con tecnología ray tracing de alto nivel.--Permite la conexión de hasta 4 pantallas simultáneas.--Formatos de conexión: 3 DisplayPort 1.4a, HDMI 2.1.--Incluye accesorios."
     },
 
 ]
