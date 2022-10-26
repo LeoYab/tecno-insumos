@@ -1,7 +1,7 @@
 import ItemCount from "../ItemCount/ItemCount";
 import Button from "../Button/Button";
 import { useState } from "react";
-import { Link, useActionData } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./ItemDetail.scss"
 import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
