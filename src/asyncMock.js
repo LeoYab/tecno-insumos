@@ -3,7 +3,6 @@ import { db } from "./services/firebase"
 
 const products = [
     {
-        id: "1",
         name: "Athlon 3000G",
         description: "2 núcleos y 3.5GHz de frecuencia con gráfica integrada.",
         price: 19000,
@@ -16,7 +15,6 @@ const products = [
         info: "--Ideal para navegar por Internet con rapidez, transmitir videos en tiempo real sin un solo corte y jugar a los juegos más populares en alta definición de 720p.--Memoria caché de 4 MB, rápida y volátil.--Procesador gráfico Radeon Vega 3 Graphics.--Su potencia es de 35 W.--Cuenta con 4 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
     },
     {
-        id: "2",
         name: "Ryzen 5 5600G",
         description: "6 núcleos y 4.4GHz de frecuencia con gráfica integrada.",
         price: 40000,
@@ -29,7 +27,6 @@ const products = [
         info: "--Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.--Memoria caché de 16 MB, rápida y volátil.--Procesador gráfico Radeon Graphics.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con 12 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
     },
     {
-        id: "3",
         name: "Ryzen 7 5700G",
         description: "8 núcleos y 4.6GHz de frecuencia con gráfica integrada.",
         price: 83000,
@@ -42,7 +39,6 @@ const products = [
         info: "--Es ideal para jugadores y creadores de contenido que requieran un instrumento de gran ejecución.--Memoria caché de 16 MB, rápida y volátil.--Procesador gráfico Radeon Graphics.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con 16 hilos que favorecen la ejecución de múltiples programas a la vez.--Producto en empaque original.--Procesador innovador desarrollado bajo altos estándares de calidad."
     },
     {
-        id: "4",
         name: "Core i3 10100",
         description: " 4 núcleos y 4.3GHz de frecuencia con gráfica integrada.",
         price: 20000,
@@ -55,7 +51,6 @@ const products = [
         info: "--Producto eficiente y de rendimiento estándar en programas de edición de video, contenido y juegos.--Memoria caché de 6 MB, rápida y volátil.--Procesador gráfico Intel UHD Graphics 630.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo, al dividir el procesador físico en dos procesadores lógicos.--Producto en empaque original.--Procesador avanzado de alto desempeño y marca líder en el rubro."
     },
     {
-        id: "5",
         name: "Core i5 6500",
         description: "4 núcleos y 3.6GHz de frecuencia con gráfica integrada",
         price: 28000,
@@ -68,7 +63,6 @@ const products = [
         info: "--Ejecuta programas de edición de videos, creación de contenido, streaming y videojuegos sin afectar el rendimiento del dispositivo.--Memoria caché de 6 MB, rápida y volátil.--Procesador gráfico Intel HD Graphics 530.--Soporta memoria RAM DDR3L, DDR4.--Su potencia es de 35 W.--Cuenta con 4 hilos que favorecen la ejecución de múltiples programas a la vez.--Procesador avanzado de alto desempeño y marca líder en el rubro."
     },
     {
-        id: "6",
         name: "Core i7 10700F",
         description: "8 núcleos y 4.8GHz de frecuencia",
         price: 67000,
@@ -81,7 +75,6 @@ const products = [
         info: "--Producto de alto rendimiento y línea exclusiva para profesionales que ejecutan muchos programas a la vez.--Memoria caché de 16 MB, rápida y volátil.--Soporta memoria RAM DDR4.--Su potencia es de 65 W.--Cuenta con Hyper-Threading que favorece la ejecución de programas en simultáneo, al dividir el procesador físico en dos procesadores lógicos.--Producto en empaque original.--Procesador avanzado de alto desempeño y marca líder en el rubro."
     },
     {
-        id: "7",
         name: "Seagate Barracuda 1TB",
         description: "Disco Rígido Seagate ST1000DM010",
         price: 8200,
@@ -94,7 +87,6 @@ const products = [
         info: "--Útil para guardar programas y documentos con su capacidad de 1 TB.--Tamaño de 3.5.--Interfaz de conexión: SATA III.--Apto para PC, Servidor y DAS.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
-        id: "8",
         name: "Seagate Barracuda 2TB",
         description: "Disco Rígido Seagate ST2000DM008",
         price: 12000,
@@ -107,7 +99,6 @@ const products = [
         info: "--Útil para guardar programas y documentos con su capacidad de 2 TB.--Tamaño de 3.5.--Interfaz de conexión: SATA III.--Apto para PC, Servidor y DAS.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
-        id: "9",
         name: "Toshiba Series 500GB",
         description: "Toshiba MQ01ABD Series",
         price: 8450,
@@ -120,7 +111,6 @@ const products = [
         info: "--Útil para guardar programas y documentos con su capacidad de 500 GB.--Tamaño de 2.5.--Interfaz de conexión: SATA III.--Apto para Consola de videojuegos, DVR, PC y Notebook.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
-        id: "10",
         name: "WD Purple 2TB",
         description: "Western Digital Purple WD20PURX",
         price: 12000,
@@ -133,7 +123,6 @@ const products = [
         info: "--Útil para guardar programas y documentos con su capacidad de 2 TB.--Tamaño de 3.5.--Interfaz de conexión: SATA III.--Apto para NVR.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
-        id: "11",
         name: "WD Blue 2TB",
         description: "Western Digital Blue WD20EZRZ 2TB",
         price: 13000,
@@ -146,7 +135,6 @@ const products = [
         info: "--Útil para guardar programas y documentos con su capacidad de 2 TB.--Tamaño de 3.5.--Es compatible con Windows, MacOS.--Interfaz de conexión: SATA III.--Apto para PC.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
-        id: "12",
         name: "WD Blue 1TB",
         description: "Western Digital Blue WD10EZEX 1TB",
         price: 8500,
@@ -159,7 +147,6 @@ const products = [
         info: "--Útil para guardar programas y documentos con su capacidad de 1 TB.--Tamaño de 3.5.--Es compatible con Windows, MacOS.--Interfaz de conexión: SATA III.--Apto para PC.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
-        id: "13",
         name: "Gigabyte 240Gb",
         description: "Gigabyte GP-GSTFS31240GNTD 240GB",
         price: 5000,
@@ -172,7 +159,6 @@ const products = [
         info: "--Con tecnología 3D NAND.--Útil para guardar programas y documentos con su capacidad de 240 GB.--Resistente a fuertes golpes.--Tamaño de 2.5.--Interfaz de conexión: SATA III.--Apto para PC y Notebook.--Las imágenes pueden ser ilustrativas."
     },
     {
-        id: "14",
         name: "Kingston 480G",
         description: "Kingston SA400S37 480GB",
         price: 8300,
@@ -185,7 +171,6 @@ const products = [
         info: "--Con tecnología 3D NAND.--Útil para guardar programas y documentos con su capacidad de 480 GB.--Resistente a fuertes golpes.--Tamaño de 2.5.--Interfaz de conexión: SATA III.--Apto para PC y Notebook.--Las imágenes pueden ser ilustrativas."
     },
     {
-        id: "15",
         name: "Samsung 870 EVO500GB",
         description: "Samsung 870 EVO MZ-77E500 500GB negro",
         price: 20000,
@@ -198,7 +183,6 @@ const products = [
         info: "--Útil para guardar programas y documentos con su capacidad de 500 GB.Tamaño de 2.5.Es compatible con Windows, MacOS, Linux.--Interfaces de conexión: SATA III y SATA II.--Apto para PC.--Incrementa el rendimiento de tu equipo.--Las imágenes pueden ser ilustrativas."
     },
     {
-        id: "16",
         name: "Corsair Vengance 16GB",
         description: "Corsair Vengeance LPX gamer 16GB 2  color negro CMK16GX4M2B3200C16",
         price: 25000,
@@ -211,7 +195,6 @@ const products = [
         info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 DRAM.--Memoria con formato UDIMM.--Alcanza una velocidad de 3600 MHz.--Apta para computadoras de escritorio.--Línea Vengeance RGB RS.--Cuenta con una tasa de transferencia de 28800 MB/s.--Compatible con AMD, Intel."
     },
     {
-        id: "17",
         name: "Corsair Select 8GB",
         description: "Corsair Value Select 8GB color verde CMSO8GX3M1C1600C11",
         price: 12000,
@@ -224,7 +207,6 @@ const products = [
         info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4.--Memoria con formato SODIMM.--Alcanza una velocidad de 2133 MHz.--Apta para notebooks.--Línea Value Select.--Cuenta con una tasa de transferencia de 17000 MB/s.--Compatible con Intel Core 6° generación."
     },
     {
-        id: "18",
         name: "Corsair Vengeance RGB Pro gamer 16GB",
         description: "Corsair Vengeance RGB Pro gamer color negro 16GB CMW16GX4M2D3600C18",
         price: 15000,
@@ -237,7 +219,6 @@ const products = [
         info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 DRAM.--Memoria con formato DIMM.--Alcanza una velocidad de 2666 MHz.--Apta para computadoras de escritorio.--Línea Vengeance RGB Pro.--Cuenta con una tasa de transferencia de 21300 MB/s.--Compatible con AMD Ryzen, Intel."
     },
     {
-        id: "19",
         name: "G.skill Trident Z Royal 16GB Ddr4",
         description: "G.skill Trident Z Royal Ddr4 3600mhz RGB",
         price: 24000,
@@ -250,7 +231,6 @@ const products = [
         info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 DRAM.--Memoria con formato UDIMM.--Apta para computadoras de escritorio.--Línea Trident Z Royal.--Cuenta con una tasa de transferencia de 32000 MB/s.--Compatible con AMD, Intel."
     },
     {
-        id: "20",
         name: "G.Skill Trident Z 16GB",
         description: "G.Skill Trident Z RGB gamer color negro 16GB F4-3600C18D-16GTZR",
         price: 24000,
@@ -263,7 +243,6 @@ const products = [
         info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4.--Memoria con formato UDIMM.--Alcanza una velocidad de 3200 MHz.--Apta para computadoras de escritorio.--Línea Trident Z RGB.--Cuenta con una tasa de transferencia de 25600 MB/s."
     },
     {
-        id: "21",
         name: "Kingston Fury Beast 8GB",
         description: "Kingston Fury Beast DDR4 gamer color negro 8GB KF432C16BB",
         price: 9500,
@@ -276,7 +255,6 @@ const products = [
         info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 SDRAM.--Memoria con formato UDIMM.--Alcanza una velocidad de 3200 MHz.--Apta para computadoras de escritorio.--Línea Fury Beast DDR4.--Cuenta con una tasa de transferencia de 25600 MB/s.--Compatible con AMD Ryzen."
     },
     {
-        id: "22",
         name: "Kingston ValueRAM 8GB",
         description: "Kingston ValueRAM color verde 8GB  KVR16N11/8WP",
         price: 12900,
@@ -289,7 +267,6 @@ const products = [
         info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 SDRAM.--Memoria con formato DIMM.--Alcanza una velocidad de 2666 MHz.--Apta para computadoras de escritorio.--Línea ValueRAM.--Cuenta con una tasa de transferencia de 21300 MB/s."
     },
     {
-        id: "23",
         name: "Kingston ValueRAM 8GB",
         description: "Kingston ValueRAM color verde 8GB KVR32S22S8",
         price: 9000,
@@ -302,7 +279,6 @@ const products = [
         info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 SDRAM.--Memoria con formato DIMM.--Alcanza una velocidad de 2666 MHz.--Apta para computadoras de escritorio.--Línea ValueRAM.--Cuenta con una tasa de transferencia de 21300 MB/s."
     },
     {
-        id: "24",
         name: "Kingston ValueRAM 8GB",
         description: "ValueRAM color verde 16GB 1 Kingston KVR26S19D8 16",
         price: 13500,
@@ -315,7 +291,6 @@ const products = [
         info: "--Optimizá el rendimiento de tu máquina con la tecnología DDR4 SDRAM.--Memoria con formato DIMM.--Alcanza una velocidad de 2666 MHz.--Apta para computadoras de escritorio.--Línea ValueRAM.--Cuenta con una tasa de transferencia de 21300 MB/s."
     },
     {
-        id: "25",
         name: "Asrock B450",
         description: "Asrock Mb Am4 B450 Steel Legend 6 Pci Gamer ",
         price: 30000,
@@ -328,7 +303,6 @@ const products = [
         info: "--Plataforma: AMD.--Chipsets: AMD B450.--Ranuras de expansión: 1 x PCI Express x16 (x16 mode),1 x PCI Express x16 slot (x4 mode),1 x PCI Express x1.--CPU: AMD.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 64 GB.--Socket: AM4."
     },
     {
-        id: "26",
         name: "Asrock Z390 Phantom Gaming",
         description: "Asrock Z390 Phantom Gaming Lga 1151 M2",
         price: 23000,
@@ -341,7 +315,6 @@ const products = [
         info: "--Plataforma: Intel.--Chipsets: z390.--Ranuras de expansión: 5 PCIe.--CPU: intel.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: 1151.--Tipo de memoria RAM: DDR4"
     },
     {
-        id: "27",
         name: "Asus A520m-k",
         description: "Asus A520m-k Am4 Ryzen 3ra Gen Hdmi M.2 1",
         price: 14670,
@@ -354,7 +327,6 @@ const products = [
         info: "--Plataforma: AMD.--Chipsets: A520.--Ranuras de expansión: 1 x PCI Express 3.0 x16 (x16 mode),2 x PCI Express x1.--CPU: Ryzen.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 64 GB.--Socket: AM4"
     },
     {
-        id: "28",
         name: "Asus Prime A320m-k",
         description: "Asus Prime A320m-k Am4 Ddr4 Usb 3.0 Hdmi A320",
         price: 12900,
@@ -367,7 +339,6 @@ const products = [
         info: "--Plataforma: AMD.--Chipsets: AMD A320.--Ranuras de expansión: 2 x PCI Express 2.0 x1.--CPU: AMD.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 32 GB.--Socket: AM4."
     },
     {
-        id: "29",
         name: "Asus Rog Strix B550-f",
         description: "Asus Rog Strix B550-f Gaming Wi-fi Am4 3ra Gen",
         price: 73000,
@@ -380,7 +351,6 @@ const products = [
         info: "--Plataforma: AMD.--Chipsets: AMD B550.--Ranuras de expansión: 1 x PCIe 3.0 x16,1 x PCIe 4.0 x16 (x16 mode),3 x PCIe 3.0 x1.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: AM4.--Tipo de memoria RAM: DDR4"
     },
     {
-        id: "30",
         name: "Asus Tuf Gaming X570 Plus",
         description: "Asus Tuf Gaming X570 Plus Wifi Am4 Ryzen Ddr4",
         price: 53000,
@@ -393,7 +363,6 @@ const products = [
         info: ""
     },
     {
-        id: "31",
         name: "Gigabyte B550-UD DS3H",
         description: "Gigabyte B550-UD DS3H 1.0 Am4 Amd Ryzen",
         price: 26000,
@@ -406,7 +375,6 @@ const products = [
         info: "--Plataforma: AMD.--Chipsets: AMD X570.--Ranuras de expansión: 1 x PCIe 4.0 x16,2 x PCIe 4.0 x1.--CPU: AMD RYZEN 3RA GENERACION.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: AM4"
     },
     {
-        id: "32",
         name: "Gigabyte H310m",
         description: "Gigabyte H310m M.2 2.0 Ddr4 9na Gen Socket 1151",
         price: 12990,
@@ -419,7 +387,6 @@ const products = [
         info: "--Plataforma: Intel.--Chipsets: Intel H310.--Ranuras de expansión: 1 x PCI Express x16 (x16 mode),2 x PCI Express x1.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 32 GB.--Socket: Socket 1151"
     },
     {
-        id: "33",
         name: "Gigabyte Z690",
         description: "Gigabyte Z690 Ud Ax Ddr5 Socket 1700",
         price: 57890,
@@ -432,7 +399,6 @@ const products = [
         info: "--Plataforma: Intel.--Chipsets: Z690.--Ranuras de expansión: 4xDDR4.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: 1700"
     },
     {
-        id: "34",
         name: "Msi A320m-a Pro Max",
         description: "Msi A320m-a Pro Max Amd Am4 Ryzen",
         price: 13000,
@@ -445,7 +411,6 @@ const products = [
         info: "--Plataforma: AMD.--Chipsets: A320.--Ranuras de expansión: Pci Express.--Aplicaciones: PC.--Capacidad máxima soportada de la memoria RAM: 32 GB.--Socket: AM4.--Tipo de memoria RAM: DDR4"
     },
     {
-        id: "35",
         name: "Msi B450 Gaming Plus Max",
         description: "Msi B450 Gaming Plus Max para minería",
         price: 30000,
@@ -458,7 +423,6 @@ const products = [
         info: "--Plataforma: AMD.--Chipsets: B450.--Ranuras de expansión: 6.--CPU: AMD.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: AM4."
     },
     {
-        id: "36",
         name: "Msi Z590 Gaming Carbon",
         description: "Msi Z590 Gaming Carbon Wifi S1200 Ddr4 11va Gen",
         price: 56000,
@@ -471,7 +435,6 @@ const products = [
         info: "--Plataforma: Intel.--Chipsets: Z590.--Ranuras de expansión: 3xPCIe_16,2xPCIe_1.--CPU: 10a Gen Intel ® Core ™ Procesadores,11 Gen Intel ® Core ™ procesadores Pentium ® Oro y Celeron ® procesadores 1.--Tipo de memoria RAM: DDR4.--Capacidad máxima soportada de la memoria RAM: 128 GB.--Socket: 1200."
     },
     {
-        id: "37",
         name: "Asus TUF Gaming RX 6700",
         description: "Asus TUF Gaming Radeon RX 6700 Series TUF OC Edition 12GB",
         price: 157000,
@@ -484,7 +447,6 @@ const products = [
         info: "--Interfaz PCI-Express 4.0.--Bus de memoria: 192bit.--Cantidad de núcleos: 2560.--Resolución máxima: 7680x4320.--Compatible con directX y openGL.--Requiere de 650W de alimentación.--Permite la conexión de hasta 4 pantallas simultáneas.--Formatos de conexión: HDMI 2.1, 3 DisplayPort 1.4a.--Incluye accesorios."
     },
     {
-        id: "38",
         name: "Radeon RX 6700",
         description: "PowerColor Red Devil Radeon RX 6700 Series 12GBD6 3DHEOC 12GB 1",
         price: 130900,
@@ -497,7 +459,6 @@ const products = [
         info: "--Interfaz PCI-Express 4.0.--Bus de memoria: 192bit.--Cantidad de núcleos: 2560.--Resolución máxima: 7680x4320.--Compatible con directX y openGL.--Requiere de 650W de alimentación.--Permite la conexión de hasta 4 pantallas simultáneas.--Formatos de conexión: HDMI 2.1, 3 DisplayPort 1.4a.--Incluye accesorios."
     },
     {
-        id: "39",
         name: "Sapphire Nitro+ Radeon RX 6600",
         description: "Sapphire Nitro+ Radeon RX 6600 Series RX 6600 XT 11309-01-20G 8GB",
         price: 110000,
@@ -510,7 +471,6 @@ const products = [
         info: "--Interfaz PCI-Express 4.0.--Bus de memoria: 128bit.--Cantidad de núcleos: 2048.--Frecuencia boost del núcleo de 2607MHz.--Resolución máxima: 7680x4320.--Requiere de 500W de alimentación.--Permite la conexión de hasta 4 pantallas simultáneas.--Formatos de conexión: HDMI, 3 DisplayPort 1.4."
     },
     {
-        id: "40",
         name: "Evga GeForce RTX 3080 Ti",
         description: "Evga FTW3 Ultra Gaming RTX 3080 Ti 12GB",
         price: 193000,
@@ -523,7 +483,6 @@ const products = [
         info: "--Interfaz PCI-Express 4.0.--Bus de memoria: 384bit.--Cantidad de núcleos: 10240.--Frecuencia boost del núcleo de 1725MHz.--Resolución máxima: 7680x4320.--Compatible con directX y openGL.--Requiere de 750W de alimentación.--Formatos de conexión: 3 DisplayPort 1.4a, HDMI 2.1."
     },
     {
-        id: "41",
         name: "Gigabyte GeForce GTX 1660 SUPER",
         description: "Gigabyte GeForce GTX 1660 SUPER GV-N166SOC-6GD OC Edition 6GB",
         price: 157800,
@@ -536,7 +495,6 @@ const products = [
         info: "--Interfaz PCI-Express 3.0.--Bus de memoria: 192bit.--Cantidad de núcleos: 1408.-Frecuencia boost del núcleo de 1785MHz y base de 1530MHz.--Requiere de 450W de alimentación.--Con ventiladores duales de 90 mm que mantienen la temperatura equilibrada.--Preparada para realidad virtual.--Formatos de conexión: DisplayPort, HDMI, DVI.--Incluye: Manual."
     },
     {
-        id: "42",
         name: "MSI Ventus XS GTX 1660 OC Edition",
         description: "MSI Ventus XS GTX 1660 OC Edition 6GB",
         price: 85000,
@@ -549,7 +507,6 @@ const products = [
         info: "--Interfaz PCI-Express 3.0.--Bus de memoria: 192bit.--Cantidad de núcleos: 1536.--Frecuencia boost del núcleo de 1830MHz.--Resolución máxima: 7680x4320.--Compatible con directX y openGL.--Requiere de 450W de alimentación.--Permite la conexión de hasta 4 pantallas simultáneas.--Formatos de conexión: 3 DisplayPort 1.4a, HDMI 2.0b."
     },
     {
-        id: "43",
         name: "Zotac Gaming RTX 3090",
         description: "Zotac Gaming GeForce RTX 3090 ZT-A30900D-10P 24GB",
         price: 305000,
@@ -563,7 +520,15 @@ const products = [
     },
 
 ]
+/* const productsRef = collection(db, "products")
 
+export const prodToAddFirebase = () => {
+
+    products.forEach(async prod => {
+        await addDoc(productsRef, prod)
+
+        }) 
+} */
 
 /* products.forEach(async prod => {
 await addDoc(collection(db, "products"))
