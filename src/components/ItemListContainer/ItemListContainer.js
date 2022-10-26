@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
-import { getProducts, filterProductByCategory, filterProductBySubCategory, filterProductByInputSearch } from '../../asyncMock'
+import { getProducts, filterProductByCategory, filterProductBySubCategory, filterProductByInputSearch, prodToAddFirebase } from '../../asyncMock'
 import HeroSlider from '../HeroSlider/HeroSlider'
 import ItemList from '../ItemList/ItemList'
 import "../ItemListContainer/ItemListContainer.scss"
 import { useParams } from 'react-router-dom'
-import { getDocs, collection } from 'firebase/firestore'
+import { getDocs, collection, query, where } from 'firebase/firestore'
 import { db } from '../../services/firebase'
 
 const ItemListContainer = ({ greeting }) => {
@@ -30,8 +30,9 @@ const ItemListContainer = ({ greeting }) => {
    
     useEffect(() => {
        
+        const collectionRef = imputSearchId ? query(collection(db, 'products'), where('category', '==', imputSearchId)) : (categoryId ? (subcategoryId ? query(collection(db, 'products'), where('subcategory', '==', subcategoryId)) : query(collection(db, 'products'), where('category', '==', categoryId))) :  collection(db, 'products'))
 
-        const collectionRef = collection(db, "products")
+        
         /* UseEffect en donde trae el filtrado de productos dependiendo de qué parámetro esté activo. Sino muestra la totalidad de productos */
 
       /*   const asyncFuncProd = imputSearchId ? filterProductByInputSearch(imputSearchId) : (categoryId ? (subcategoryId ? filterProductBySubCategory(subcategoryId) : filterProductByCategory(categoryId)) : getProducts()); */
@@ -59,7 +60,7 @@ const ItemListContainer = ({ greeting }) => {
             setLoading(false);
         })
 
-    }, [/* categoryId, subcategoryId, imputSearchId */])
+    }, [categoryId, subcategoryId, imputSearchId])
 
     /* Si es verdadero muestra el spinner de carga*/
 
