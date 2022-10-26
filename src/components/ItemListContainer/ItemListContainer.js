@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react'
-import { getProducts, filterProductByCategory, filterProductBySubCategory, filterProductByInputSearch, prodToAddFirebase } from '../../asyncMock'
 import HeroSlider from '../HeroSlider/HeroSlider'
 import ItemList from '../ItemList/ItemList'
 import "../ItemListContainer/ItemListContainer.scss"
@@ -30,12 +29,11 @@ const ItemListContainer = ({ greeting }) => {
    
     useEffect(() => {
        
-        const collectionRef = imputSearchId ? query(collection(db, 'products'), where('category', '==', imputSearchId)) : (categoryId ? (subcategoryId ? query(collection(db, 'products'), where('subcategory', '==', subcategoryId)) : query(collection(db, 'products'), where('category', '==', categoryId))) :  collection(db, 'products'))
+        const collectionRef = imputSearchId ? query(collection(db, 'products'), where('keywords', 'array-contains', imputSearchId.toLowerCase())) : (categoryId ? (subcategoryId ? query(collection(db, 'products'), where('subcategory', '==', subcategoryId)) : query(collection(db, 'products'), where('category', '==', categoryId))) :  collection(db, 'products'))
 
-        
+
         /* UseEffect en donde trae el filtrado de productos dependiendo de qué parámetro esté activo. Sino muestra la totalidad de productos */
 
-      /*   const asyncFuncProd = imputSearchId ? filterProductByInputSearch(imputSearchId) : (categoryId ? (subcategoryId ? filterProductBySubCategory(subcategoryId) : filterProductByCategory(categoryId)) : getProducts()); */
         setLoading(true);
 
       
