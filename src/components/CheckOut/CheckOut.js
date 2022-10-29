@@ -16,9 +16,9 @@ const CheckOut = () => {
 
     const navigate = useNavigate()
 
-
     const createOrder = async (dataUser) => {
 
+        console.log(dataUser)
         setLoading(true)
 
         try {
@@ -65,9 +65,11 @@ const CheckOut = () => {
 
                 const orderAdded = await addDoc(orderRef, objOrder)
 
-                clearCart()
-
+                
+                clearCart([])
+                
                 setTimeout(() => {
+                
                     navigate('/')
                 }, 3000)
 
@@ -91,7 +93,8 @@ const CheckOut = () => {
     return (
         <div>
             <h1>Checkout</h1>
-            <ItemForm crtordr={{createOrder}} />
+            <ItemForm crtordr={createOrder} />
+
             {/*  { <button onClick={createOrder}>generar orden</button>} */}
         </div>
     )

@@ -84,14 +84,14 @@ cart.forEach(prod => {
        
     }
     
-    const clarCart = () =>{
+    const clearCart = () =>{
 
         setCart([])
     }
 
 
     return (
-        <CartContext.Provider value={{ cart, quantity, addItem, removeProd, totalItems, prodsAdded, clarCart }}>
+        <CartContext.Provider value={{ cart, quantity, addItem, removeProd, totalItems, prodsAdded, clearCart }}>
             {children}
         </CartContext.Provider>
 

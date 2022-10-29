@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { Link } from "react-router-dom"
 
-const ItemForm = ({ crtordr }) => {
 
+const ItemForm = ({crtordr}) => {
+    
     const [dataUser, setDataUser] = useState({
 
         name: "",
@@ -36,10 +36,10 @@ const ItemForm = ({ crtordr }) => {
                             <input type="text" className="form-control" placeholder="Apellido" value={dataUser.lastname} onChange={(e) => setDataUser({ ...dataUser, lastname: e.target.value })} />
                         </div>
 
-                        <div className="col mb-2">
+                {/*         <div className="col mb-2">
 
                             <input type="email" className="form-control mb-4" placeholder="E-mail" value={dataUser.email} onChange={(e) => setDataUser({ ...dataUser, email: e.target.value })} />
-                        </div>
+                        </div> */}
                     </div>
 
 
@@ -56,7 +56,7 @@ const ItemForm = ({ crtordr }) => {
 
                         <input type="number" className="form-control" placeholder="Código postal" value={dataUser.zipcode} onChange={(e) => setDataUser({ ...dataUser, zipcode: e.target.value })} />
                     </div>
-                    <Link to="/checkout"> <button className="btn btn-info my-4 btn-block text-white" type="submit" onClick={() => crtordr(dataUser)}>Comprar</button></Link>
+                   <button onClick={() => crtordr(dataUser)} className="btn btn-info my-4 btn-block text-white" type="button">Comprar</button>
                 </div>
             </form>
         </div>
