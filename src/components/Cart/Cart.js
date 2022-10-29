@@ -50,7 +50,7 @@ const Cart = () => {
             <div className="w-50 text-end">
 
                 <h2>{totalItems !== 0 ? "Precio: $" + totalItems : <Link to="/"><h5>Ir a comprar</h5></Link>}</h2>
-                <Link to="/itemform"><button>Realizar Compra</button></Link>
+                <Link to="/checkout"><button>Realizar Compra</button></Link>
 
             </div>
         </div>
