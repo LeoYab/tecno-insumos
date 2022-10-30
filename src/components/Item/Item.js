@@ -2,7 +2,7 @@ import "../Item/Item.scss"
 import Button from "../Button/Button";
 import { Link } from "react-router-dom"
 
-const Item = ({ id, img, img2, name, description, price, info }) => {
+const Item = ({ id, img, img2, name, description, price, stock }) => {
 
     return (
 
@@ -29,8 +29,10 @@ const Item = ({ id, img, img2, name, description, price, info }) => {
                 <h5 className="card-title">{name}</h5>
                 <p className="card-text">{description}</p>
             </div>
+            <div className="d-flex flex-column align-items-center w-100">
+            {stock === 0 && <p className="cursor mb-2 border border-danger rounded text-danger w-50" >Agotado</p> }
             <h6>Precio: ${price}</h6>
-      
+            </div>
            <Link to = {`/item/${id}`}><Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Detalle</Button></Link>
            
         </div>
