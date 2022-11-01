@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import "../ItemForm/ItemForm.scss"
 
 const ItemForm = ({crtordr}) => {
     
@@ -16,13 +16,13 @@ const ItemForm = ({crtordr}) => {
 
 
     return (
-        <div>
-            <div className="d-flex justify-content-center">
-                <h3 className="mt-4 bg-info w-50 rounded text-white">INGRESA TUS DATOS</h3>
-            </div>
-            <form className="d-flex justify-content-center">
+      
+            <div className="d-flex flex-column align-items-center mt-2">
+                <h3 className="contentForm bg-info rounded text-white mb-0">INGRESA TUS DATOS</h3>
+           
+            <form className="contentForm justify-content-center">
 
-                <div className="p-3 shadow rounded w-50">
+                <div className="p-3 shadow rounded">
                     <p className="h4 mb-4">Información personal</p>
 
                     <div className="form-row mb-4">
@@ -59,7 +59,8 @@ const ItemForm = ({crtordr}) => {
                    <button onClick={() => crtordr(dataUser)} className="btn btn-info my-4 btn-block text-white" type="button">Comprar</button>
                 </div>
             </form>
-        </div>
+            </div>
+ 
 
     )
 
