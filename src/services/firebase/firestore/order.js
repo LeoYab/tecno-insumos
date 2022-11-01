@@ -2,7 +2,7 @@ import { collection, getDocs, query, where, documentId, writeBatch, addDoc } fro
 import { db } from '..'
 import { createProdAdaptedFirestore } from '../../../adapter/productAdapter'
 
-export const createOrder = async ({cart, totalItems, clearCart, setLoading, navigate, dataUserForm}) => {
+export const createOrder = async ({cart, totalItems, clearCart, setLoading, navigate, dataUserForm, orderCreated, failOrder}) => {
 
     setLoading(true)
 
@@ -60,9 +60,12 @@ export const createOrder = async ({cart, totalItems, clearCart, setLoading, navi
                 navigate('/')
             }, 3000)
 
-            console.log(`El id de su orden es: ${orderAdded.id}`)
+            orderCreated(orderAdded.id)
+
         } else {
-            console.log('hay productos que estan fuera de stock')
+
+            failOrder()
+
         }
 
     } catch (error) {
