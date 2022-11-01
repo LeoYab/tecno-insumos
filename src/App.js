@@ -25,13 +25,7 @@ function App() {
 
             <Routes>
 
-              <Route path="/" element={<ItemListContainer greeting={
-                {
-                  dia: "Buenos días",
-                  tarde: "Buenas tardes",
-                  noche: "Buenas noches"
-                }
-              } />} />
+              <Route path="/" element={<ItemListContainer />} />
 
               <Route path="/category/:categoryId" element={<ItemListContainer />} />
               <Route path="/category/:categoryId/:subcategoryId" element={<ItemListContainer />} />

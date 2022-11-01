@@ -33,7 +33,7 @@ const Item = ({ id, img, img2, name, description, price, stock }) => {
             {stock === 0 && <p className="cursor mb-2 border border-danger rounded text-danger w-50" >Agotado</p> }
             <h6>Precio: ${price}</h6>
             </div>
-           <Link to = {`/item/${id}`}><Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Detalle</Button></Link>
+           <Link to = {`/item/${id}`}><Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Ver producto</Button></Link>
            
         </div>
 

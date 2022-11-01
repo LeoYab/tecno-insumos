@@ -3,7 +3,7 @@ import { Link } from "react-router-dom"
 import { CartContext } from "../../context/CartContext"
 import { NotificationContext } from "../../Notifications/NotificationsServices"
 import CartItem from "../CartItem/CartItem"
-
+import "../Cart/Cart.scss"
 const Cart = () => {
 
     const { cart, removeProd, totalItems } = useContext(CartContext)
@@ -28,9 +28,9 @@ const Cart = () => {
     }
 
     return (
-        <div className="d-flex flex-column align-items-center mt-2">
+        <div className="d-flex flex-column align-items-center m-2">
 
-            <table className="table table-striped w-50 text-start">
+            <table className="tableCart table table-striped text-start">
                 <thead className="table-dark">
                     <tr>
                         <th scope="col">Nombre</th>
