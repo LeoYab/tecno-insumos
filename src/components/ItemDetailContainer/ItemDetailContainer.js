@@ -7,38 +7,40 @@ const ItemDetailContainer = (() => {
 
     const [product, setProduct] = useState([])
     const [loading, setLoading] = useState(true)
-    const  { productId } = useParams();
+    const { productId } = useParams();
 
 
     useEffect(() => {
 
         setLoading(true);
 
-        getProduct(productId).then(product =>{
+        getProduct(productId).then(product => {
 
             setProduct(product)
 
         }).finally(() => {
-    
+
             setLoading(false);
         })
-      
+
     }, [productId])
 
 
-    /* Si es verdadero muestra el spinner de carga*/
-
     if (loading) {
         return (
-            <div className="spinner-border text-info m-5" role="status">
-                <span className="visually-hidden">Loading...</span>
+            <div className="spin container-fluid position-relative">
+                <div className="position-absolute top-50 start-50 translate-middle">
+                    <div className="spinner-border text-info m-5" role="status">
+                        <span className="visually-hidden">Loading...</span>
+                    </div>
+                </div>
             </div>
         )
     }
 
     return (
-  
-            <ItemDetail {...product} />
+
+        <ItemDetail {...product} />
 
     )
 })
