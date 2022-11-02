@@ -2,7 +2,7 @@ import { collection, getDocs, query, where, documentId, writeBatch, addDoc } fro
 import { db } from '..'
 import { createProdAdaptedFirestore } from '../../../adapter/productAdapter'
 
-export const createOrder = async ({cart, totalItems, clearCart, setLoading, navigate, dataUserForm, orderCreated, failOrder}) => {
+export const createOrder = async ({ cart, totalItems, clearCart, setLoading, navigate, dataUserForm, orderCreated, failOrder, date }) => {
 
     setLoading(true)
 
@@ -13,6 +13,7 @@ export const createOrder = async ({cart, totalItems, clearCart, setLoading, navi
                 dataUserForm
 
             },
+            date: date,
             items: cart,
             total: totalItems
         }
@@ -33,7 +34,7 @@ export const createOrder = async ({cart, totalItems, clearCart, setLoading, navi
 
             const dataDoc = createProdAdaptedFirestore(doc)
 
-            const stockDb = dataDoc.stock 
+            const stockDb = dataDoc.stock
 
             const productAddedToCart = cart.find(prod => prod.id === doc.id)
             const prodQuantity = productAddedToCart?.quantity
@@ -41,7 +42,7 @@ export const createOrder = async ({cart, totalItems, clearCart, setLoading, navi
             if (stockDb >= prodQuantity) {
                 batch.update(doc.ref, { stock: stockDb - prodQuantity })
             } else {
-                outOfStock.push(createProdAdaptedFirestore(doc)/* { id: doc.id, ...dataDoc } */)
+                outOfStock.push(createProdAdaptedFirestore(doc))
             }
         })
 
@@ -52,13 +53,13 @@ export const createOrder = async ({cart, totalItems, clearCart, setLoading, navi
 
             const orderAdded = await addDoc(orderRef, objOrder)
 
-            
+
             clearCart()
-            
+
             setTimeout(() => {
-            
+
                 navigate('/')
-            }, 3000)
+            }, 1000)
 
             orderCreated(orderAdded.id)
 
@@ -69,7 +70,11 @@ export const createOrder = async ({cart, totalItems, clearCart, setLoading, navi
         }
 
     } catch (error) {
-        console.log(error)
+        return (
+            <div className="d-flex align-items-end dot-pulse position-absolute top-50 start-50 translate-middle" >
+                <h1 className="mb-0">Error al cargar la página {error}</h1>
+            </div>
+        )
     } finally {
         setLoading(false)
     }

@@ -24,9 +24,11 @@ const ItemDetailContainer = (() => {
     }
 
     if (error) {
-        <div className="d-flex align-items-end dot-pulse position-absolute top-50 start-50 translate-middle" >
-            <h1 className="mb-0">Error al cargar la página</h1>
-        </div>
+        return(
+            <div className="d-flex align-items-end dot-pulse position-absolute top-50 start-50 translate-middle" >
+                <h1 className="mb-0">No existe el producto seleccionado</h1>
+            </div>
+        )
     }
 
 

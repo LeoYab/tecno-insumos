@@ -5,13 +5,14 @@ import { useParams } from 'react-router-dom'
 import { getProducts } from '../../services/firebase/firestore/products'
 import { useAsync } from '../../hooks/useAsync'
 
-const ItemListContainer = () => {
+const ItemListContainer = (() => {
 
     const { categoryId, subcategoryId, imputSearchId } = useParams();
 
     const getProductsFirestore = () => getProducts({ categoryId, subcategoryId, imputSearchId })
 
     const { data: products, error, loading } = useAsync(getProductsFirestore, [categoryId, subcategoryId, imputSearchId])
+
 
 
     if (loading) {
@@ -30,19 +31,20 @@ const ItemListContainer = () => {
     }
 
     if (error) {
-        <div className="d-flex align-items-end dot-pulse position-absolute top-50 start-50 translate-middle" >
-            <h1 className="mb-0">Error al cargar la página</h1>
-        </div>
+        return (
+            <div className="d-flex align-items-end dot-pulse position-absolute top-50 start-50 translate-middle" >
+                <h1 className="mb-0">Error al cargar la página</h1>
+            </div>
+        )
     }
 
 
     return (
-
         <div>
             <HeroSlider />
             <ItemList products={products} />
         </div>
     )
-}
+})
 
 export default ItemListContainer;

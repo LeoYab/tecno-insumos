@@ -12,6 +12,9 @@ export const getProduct = (categoryid) => {
     
             resolve(createProdAdaptedFirestore(respProduct))
     
+        }).catch(error => {
+            reject (error)
+            
         })
 
     })

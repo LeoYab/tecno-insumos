@@ -30,7 +30,7 @@ const Item = ({ id, img, img2, name, description, price, stock }) => {
                 <p className="card-text">{description}</p>
             </div>
             <div className="d-flex flex-column align-items-center w-100">
-            {stock === 0 && <p className="cursor mb-2 border border-danger rounded text-danger w-50" >Agotado</p> }
+            {stock === 0 && <p className="cursor mb-2 border border-danger rounded text-danger w-50">Agotado</p> }
             <h6>Precio: ${price}</h6>
             </div>
            <Link to = {`/item/${id}`}><Button type="button" className="btn btn-outline-info mb-2 col-8 align-self-center">Ver producto</Button></Link>

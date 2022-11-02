@@ -11,7 +11,6 @@ export const getProducts = ({categoryId, subcategoryId, imputSearchId}) => {
         getDocs(collectionRef).then(respProducts => {
 
             const productsAdapted = respProducts.docs.map(doc => {
-      
     
             return(createProdAdaptedFirestore(doc))
     
@@ -19,6 +18,9 @@ export const getProducts = ({categoryId, subcategoryId, imputSearchId}) => {
     
         resolve(productsAdapted);
     
+        }).catch(error => {
+            reject(error)
+
         })
 
     })

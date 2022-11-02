@@ -16,7 +16,7 @@ export const createProdAdaptedFirestore = (doc) => {
         img2: data.img2
 
     }
-
+  
     return productAdapted
 
 }

@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom"
 import { createOrder } from "../../services/firebase/firestore/order"
 import { DotPulse } from '@uiball/loaders'
 import { NotificationContext } from "../../Notifications/NotificationsServices"
+import Cart from "../Cart/Cart"
 
 const CheckOut = () => {
 
@@ -13,12 +14,14 @@ const CheckOut = () => {
     const { cart, totalItems, clearCart } = useContext(CartContext)
 
     const { orderCreated, failOrder } = useContext(NotificationContext)
-
+    
+    const date = new Date();
+    
     const navigate = useNavigate()
 
     const formOrder = (dataUserForm) => {
 
-        createOrder({ cart, totalItems, clearCart, setLoading, navigate, dataUserForm, orderCreated, failOrder})
+        createOrder({ cart, totalItems, clearCart, setLoading, navigate, dataUserForm, orderCreated, failOrder, date})
 
     }
 

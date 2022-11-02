@@ -9,16 +9,17 @@ export const useAsync = (asyncFn, dependencies) => {
 
     useEffect(() => {
         setLoading(true);
+ 
+        asyncFn()
+            .then(data => {
+                setData(data)
 
-        asyncFn().then(data => {
-            setData(data)
+            }).catch(error => {
+                setError(error)
 
-        }).catch((error) => {
-            setError(error)
-
-        }).finally(() => {
-            setLoading(false);
-        })
+            }).finally(() => {
+                setLoading(false);
+            })
 
     }, [...dependencies])
 
