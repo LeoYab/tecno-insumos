@@ -2,17 +2,15 @@ import { collection, getDocs, query, where, documentId, writeBatch, addDoc } fro
 import { db } from '..'
 import { createProdAdaptedFirestore } from '../../../adapter/productAdapter'
 
-export const createOrder = async ({ cart, totalItems, clearCart, setLoading, navigate, dataUserForm, orderCreated, failOrder, date }) => {
+export const createOrder = async ({ cart, totalItems, clearCart, setLoading, navigate, buyer, orderCreated, failOrder, date }) => {
 
     setLoading(true)
 
     try {
         const objOrder = {
-            buyer: {
 
-                dataUserForm
-
-            },
+            buyer,
+            
             date: date,
             items: cart,
             total: totalItems

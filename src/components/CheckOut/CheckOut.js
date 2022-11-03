@@ -19,9 +19,9 @@ const CheckOut = () => {
     
     const navigate = useNavigate()
 
-    const formOrder = (dataUserForm) => {
+    const formOrder = (buyer) => {
 
-        createOrder({ cart, totalItems, clearCart, setLoading, navigate, dataUserForm, orderCreated, failOrder, date})
+        createOrder({ cart, totalItems, clearCart, setLoading, navigate, buyer, orderCreated, failOrder, date})
 
     }
 
