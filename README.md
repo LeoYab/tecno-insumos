@@ -24,4 +24,6 @@ $ npm start
 
 ## Testear en la web
 
+[GIF de navegación](https://drive.google.com/file/d/1vXrVygiOjxYnjjs5e3Pg8cdko3MA3nsw/view?usp=share_link)
+
 [Deploy](https://reacte-commerce.vercel.app/)
