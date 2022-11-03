@@ -1,37 +1,18 @@
-import { useState, useEffect } from 'react'
 import HeroSlider from '../HeroSlider/HeroSlider'
 import ItemList from '../ItemList/ItemList'
 import "../ItemListContainer/ItemListContainer.scss"
 import { useParams } from 'react-router-dom'
 import { getProducts } from '../../services/firebase/firestore/products'
+import { useAsync } from '../../hooks/useAsync'
 
-const ItemListContainer = () => {
+const ItemListContainer = (() => {
 
     const { categoryId, subcategoryId, imputSearchId } = useParams();
 
-    const [products, setProducts] = useState([])
-    const [loading, setLoading] = useState(true)
+    const getProductsFirestore = () => getProducts({ categoryId, subcategoryId, imputSearchId })
 
-    useEffect(() => {
+    const { data: products, error, loading } = useAsync(getProductsFirestore, [categoryId, subcategoryId, imputSearchId])
 
-
-        setLoading(true);
-
-        getProducts({ categoryId, subcategoryId, imputSearchId }).then(products => {
-
-            setProducts(products)
-
-        }).catch(() => {
-
-            return (
-                <h1 className="visually-hidden">ERROR</h1>
-            )
-
-        }).finally(() => {
-            setLoading(false);
-        })
-
-    }, [categoryId, subcategoryId, imputSearchId])
 
 
     if (loading) {
@@ -49,14 +30,21 @@ const ItemListContainer = () => {
         )
     }
 
+    if (error) {
+        return (
+            <div className="d-flex align-items-end dot-pulse position-absolute top-50 start-50 translate-middle" >
+                <h1 className="mb-0">Error al cargar la página</h1>
+            </div>
+        )
+    }
+
 
     return (
-
         <div>
             <HeroSlider />
             <ItemList products={products} />
         </div>
     )
-}
+})
 
 export default ItemListContainer;

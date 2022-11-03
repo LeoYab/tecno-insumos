@@ -1,30 +1,15 @@
-import { useState, useEffect } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
 import { getProduct } from "../../services/firebase/firestore/product";
+import { useAsync } from "../../hooks/useAsync";
 
 const ItemDetailContainer = (() => {
 
-    const [product, setProduct] = useState([])
-    const [loading, setLoading] = useState(true)
     const { productId } = useParams();
 
+    const getProductsFirestore = () => getProduct(productId)
 
-    useEffect(() => {
-
-        setLoading(true);
-
-        getProduct(productId).then(product => {
-
-            setProduct(product)
-
-        }).finally(() => {
-
-            setLoading(false);
-        })
-
-    }, [productId])
-
+    const { data: product, error, loading } = useAsync(getProductsFirestore, productId)
 
     if (loading) {
         return (
@@ -37,6 +22,15 @@ const ItemDetailContainer = (() => {
             </div>
         )
     }
+
+    if (error) {
+        return(
+            <div className="d-flex align-items-end dot-pulse position-absolute top-50 start-50 translate-middle" >
+                <h1 className="mb-0">No existe el producto seleccionado</h1>
+            </div>
+        )
+    }
+
 
     return (
 
