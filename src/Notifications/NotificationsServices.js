@@ -44,8 +44,7 @@ export const NotificationsServices = ({ children }) => {
 
     Swal.fire({
       icon: 'success',
-      title: 'Se creó orden con el código:',
-      text: `${order}`,
+      title: `Orden creada con el ID ${order.bold()}`,
       confirmButtonColor: '#0dcaf0',
     })
 

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom"
 import { createOrder } from "../../services/firebase/firestore/order"
 import { DotPulse } from '@uiball/loaders'
 import { NotificationContext } from "../../Notifications/NotificationsServices"
-import Cart from "../Cart/Cart"
+
 
 const CheckOut = () => {
 

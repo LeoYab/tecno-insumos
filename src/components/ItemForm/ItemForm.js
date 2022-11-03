@@ -8,7 +8,7 @@ const ItemForm = ({ crtordr }) => {
     const [dataUser, setDataUser] = useState("")
     const navigate = useNavigate()
     const { register, handleSubmit, formState: { errors } } = useForm();
-    const onSubmit = data => {data.email !== data.reenteremail ? setDataUser(<small className="alertValidation fw-semibold">Email no coincide</small>) : crtordr(data) }
+    const onSubmit = data => {data.email !== data.reenteremail ? setDataUser(<small className="alertValidation fw-semibold">Email no coincide</small>) : crtordr(data)}
 
 
     return (
@@ -47,24 +47,23 @@ const ItemForm = ({ crtordr }) => {
                         </div>
 
                         <div className="col mb-2 text-start">
-                            {errors.phone && <small className="alertValidation fw-semibold">Dato invalido</small>}
+                            {errors.phone && <small className="alertValidation fw-semibold">Ingrese su celular</small>}
                             <input type="number" className="form-control" placeholder="Celular" {...register("phone", { required: true, minLength: 6, maxLength: 12 })} />
 
                         </div>
                         <p className="h4 mb-4">Información de envío</p>
 
                         <div className="col mb-2 text-start">
-                            {errors.address && <small className="alertValidation fw-semibold">Dato invalido</small>}
+                            {errors.address && <small className="alertValidation fw-semibold">Indique su dirección</small>}
                             <input type="text" className="form-control" placeholder="Dirección" {...register("address", { required: true, maxLength: 12 })} />
                         </div>
 
                         <div className="col mb-2 text-start">
-                            {errors.zipcode && <small className="alertValidation fw-semibold">Dato invalido</small>}
+                            {errors.zipcode && <small className="alertValidation fw-semibold">Indique su código postal</small>}
                             <input type="number" className="form-control" placeholder="Código Postal" {...register("zipcode", { required: true, maxLength: 12 })} />
                         </div>
                         <button onClick={() => navigate(-1)} className="btn btn-secondary my-4 btn-block text-white me-2">Volver</button>
-                        <button type="submit" className="btn btn-info my-4 btn-block text-white ms-2">Comprar</button>
-                        {/* <input type="submit" name="Comprar" className="btn btn-outline-info my-4 btn-block text-white" /> */}
+                        <button type="submit" className="btn btn-info my-4 btn-block text-white ms-2">Comprar</button> 
 
                     </div>
 
@@ -78,4 +77,4 @@ const ItemForm = ({ crtordr }) => {
 
 }
 
-export default ItemForm
+export default ItemForm 
