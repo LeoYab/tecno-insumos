@@ -51,8 +51,8 @@ const Cart = () => {
             <div className="w-50 text-end">
 
                 <h2>{totalItems !== 0 ? "Total: $" + totalItems : <Link to="/"><button className="btn btn-secondary my-4 btn-block text-white">Ir a comprar</button></Link>}</h2>
+                {totalItems !== 0 && <Link to="/"><button className="btn btn-secondary my-4 me-2 btn-block text-white">Volver</button></Link>}
                 {totalItems !== 0 && <Link to="/checkout"><button className="btn btn-info my-4 btn-block text-white">Realizar Compra</button></Link>}
-
             </div>
         </div>
 
