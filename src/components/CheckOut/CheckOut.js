@@ -3,7 +3,7 @@ import { CartContext } from "../../context/CartContext"
 import ItemForm from "../ItemForm/ItemForm"
 import { useNavigate } from "react-router-dom"
 import { createOrder } from "../../services/firebase/firestore/order"
-import { DotPulse } from '@uiball/loaders'
+import ClipLoader from "react-spinners/ClipLoader";
 import { NotificationContext } from "../../Notifications/NotificationsServices"
 
 
@@ -31,7 +31,7 @@ const CheckOut = () => {
             <div className="d-flex align-items-end dot-pulse position-absolute top-50 start-50 translate-middle" >
                 <h1 className="mb-0">Se esta generando su orden</h1>
                 <div className="ms-1 mb-1">
-                    <DotPulse size={40} speed={1.3} color="#2a2a2a" />
+                    <ClipLoader size={40} speedMultiplier={1.3} color="#2a2a2a" />
                 </div>
             </div>
         )
