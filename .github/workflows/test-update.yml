@@ -22,7 +22,6 @@ jobs:
 
     - name: Test
       run: npm test
-
     - name: Push Request
       if: success() 
       uses: devops-infra/action-pull-request@v0.5.5
@@ -32,11 +31,6 @@ jobs:
         title: "Auto PR"
         body: "Tests passed. Push PR from test to main."
         github_token: ${{ secrets.GITHUB_TOKEN }}
-
-
-        
-      
-
 
 
        
