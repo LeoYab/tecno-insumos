@@ -13,7 +13,7 @@ jobs:
     steps:
       - name: Clone repository
         run: 
-          git clone https://github.com/${{ github.repository }} tecno-insumos
+          git clone https://github.com/${{ github.repository }}.git
           cd tecno-insumos
           git checkout ${{ github.event.workflow_run.head_branch }}
 
