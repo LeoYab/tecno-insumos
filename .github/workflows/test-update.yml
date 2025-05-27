@@ -21,11 +21,21 @@ jobs:
       run: npm install
 
     - name: Test
-<<<<<<< HEAD
       run: npm test
-=======
-    
->>>>>>> 4ccf31befada021dad68bbdb828db6bc76848dde
+
+    - name: Push Request
+      if: success() 
+      uses: devops-infra/action-pull-request@v0.5.5
+      with:
+        source_branch: test
+        target_branch: main
+        title: "Auto PR"
+        body: "Tests passed. Push PR from test to main."
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
+        
+      
 
 
 
