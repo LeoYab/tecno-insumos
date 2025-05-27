@@ -20,11 +20,26 @@ jobs:
       - name: Install Docker
         run: docker --version
 
+      - name: Pull node:24-alpine
+        run: docker pull node:24-alpine
+        
+      - name: Set working directory
+        run: cd /app 
+
       - name: Login Docker
         run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ vars.DOCKERHUB_USERNAME }}" --password-stdin
 
+      - name: Create docker container
+        run: docker create -it -n tecno-insumos node:24-alpine sh
+
+      - name: Copy files to container
+        run: docker cp ./app/. tecno-insumos:/app
+
+      - name: Install dependencies
+        run: docker start -a tecno-insumos && docker exec tecno-insumos sh -c "cd /app && npm install"
+
       - name: Build Docker image
-        run: docker build -t yaboleo/tecno-insumos:latest .
-    
-      - name: Push Docker image
+        run: docker commit --change='WORKDIR /app' --change='EXPOSE 3000' --change='CMD ["npm", "start"]' tecno-insumos yaboleo/tecno-insumos:latest
+
+      - name: Push a Docker Hub
         run: docker push yaboleo/tecno-insumos:latest
