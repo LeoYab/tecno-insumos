@@ -29,7 +29,7 @@ const CheckOut = () => {
 
         return (
             <div className="d-flex align-items-end dot-pulse position-absolute top-50 start-50 translate-middle" >
-                <h1 className="mb-0">Se esta generando su orden</h1>
+                <h1 className="mb-0">Generando orden...</h1>
                 <div className="ms-1 mb-1">
                     <ClipLoader size={40} speedMultiplier={1.3} color="#2a2a2a" />
                 </div>
