@@ -1,0 +1,40 @@
+name: docker-build
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Clone repo
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Install dependencies
+      run: |
+        curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
+        sudo apt-get install -y nodejs
+        node -v
+        npm -v
+        npm install
+
+    - name: Log in to DockerHub
+      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ vars.DOCKER_USERNAME }}" --password-stdin
+    
+    - name: Build Docker image
+      run: docker build -t ${{ vars.DOCKER_USERNAME }}/tecno-insumos:latest .
+
+    - name: Push Docker image to DockerHub
+      run: docker push ${{ vars.DOCKER_USERNAME }}/tecno-insumos:latest
+  
+   
+      
+      
+
+
+
+
