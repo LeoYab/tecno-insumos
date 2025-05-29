@@ -15,13 +15,19 @@ jobs:
     - name: Verify Node.js and npm versions  
       run: node -v && npm -v
 
-    - name: Clone repository
+    - name: Checkout repo at dev
       uses: actions/checkout@v4
       with:
         ref: dev
 
-    - name: Push Request
-      if: success() 
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run tests
+      run: npm test
+
+    - name: Create Pull Request
+      if: success()
       uses: devops-infra/action-pull-request@v0.5.5
       with:
         source_branch: dev
@@ -29,6 +35,3 @@ jobs:
         title: "Auto PR"
         body: "Tests passed. Push PR from dev to main."
         github_token: ${{ secrets.GITHUB_TOKEN }}
-
-
-       
