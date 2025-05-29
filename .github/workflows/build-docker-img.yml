@@ -14,18 +14,20 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Install dependencies
-      run: |
-        curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash -
-        sudo apt-get install -y nodejs
-        node -v
-        npm -v
-        npm install
-
     - name: Log in to DockerHub
       run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ vars.DOCKERHUB_USERNAME }}" --password-stdin
     
-    - name: Build Docker image
+    - name: Create Dockerfile
+      run: |
+       echo "FROM node:24-alpine"
+       echo "WORKDIR /app"
+       echo "COPY package*.json ./"
+       echo "RUN npm install"
+       echo "COPY . ./"
+       echo "EXPOSE 3000"
+       echo "CMD ["npm", "start"]" 
+
+    - name: Build docker image  
       run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest .
 
     - name: Push Docker image to DockerHub
