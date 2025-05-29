@@ -32,7 +32,7 @@ function App() {
               <Route path="/search/:imputSearchId" element={<ItemListContainer />} />
               <Route path="/cart" element={<Cart />} />
               <Route path="/checkout" element={<CheckOut />} />
-              <Route path="*" element={<h1>404 ERROR NOT FOUND</h1>} />
+              <Route path="*" element={<h1>404 NOT FOUND</h1>} />
 
             </Routes>
 
