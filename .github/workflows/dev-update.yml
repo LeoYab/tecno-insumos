@@ -32,11 +32,16 @@ jobs:
 
     - name: Create Pull Request to main
       if: success()
-      uses: peter-evans/create-pull-request@v7
-      with:
-        commit-message: "Auto PR: Sync dev to main"
-        title: "Auto PR"
-        body: "Tests passed. Creating pull request from dev to main."
-        base: main
-        branch: dev
-        token: ${{ secrets.GITHUB_TOKEN }}
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        REPO: https://github.com/LeoYab/tecno-insumos.git
+      run: |
+        curl -X POST -H "Authorization: token $GH_TOKEN" \
+          -H "Accept: application/vnd.github+json" \
+          https://api.github.com/repos/$REPO/pulls \
+          -d '{
+            "title": "Auto PR",
+            "head": "dev",
+            "base": "main",
+            "body": "Tests passed. Creating pull request from dev to main."
+          }'
