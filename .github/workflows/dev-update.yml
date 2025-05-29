@@ -34,7 +34,7 @@ jobs:
       if: success()
       env:
         GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        REPO: https://github.com/LeoYab/tecno-insumos.git
+        REPO: ${{ github.repository }}
       run: |
         curl -X POST -H "Authorization: token $GH_TOKEN" \
           -H "Accept: application/vnd.github+json" \
