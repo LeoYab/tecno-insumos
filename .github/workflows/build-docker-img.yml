@@ -23,13 +23,13 @@ jobs:
         npm install
 
     - name: Log in to DockerHub
-      run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ vars.DOCKER_USERNAME }}" --password-stdin
+      run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ vars.DOCKERHUB_USERNAME }}" --password-stdin
     
     - name: Build Docker image
-      run: docker build -t ${{ vars.DOCKER_USERNAME }}/tecno-insumos:latest .
+      run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest .
 
     - name: Push Docker image to DockerHub
-      run: docker push ${{ vars.DOCKER_USERNAME }}/tecno-insumos:latest
+      run: docker push ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest
   
    
       
