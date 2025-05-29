@@ -24,10 +24,14 @@ jobs:
         git checkout dev
         
     - name: Install dependencies
-      run: npm install
+      run: |
+        cd tecno-insumos
+        npm install
 
     - name: Test
-      run: npm test
+      run: |
+        cd tecno-insumos
+        npm test
 
     - name: Push Request
       if: success() 
