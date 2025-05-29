@@ -1,0 +1,43 @@
+name: Test & PR
+
+on: 
+  push:
+    branches: [dev]
+
+jobs:
+  build: 
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Install Node.js
+      run: curl -fsSL https://deb.nodesource.com/setup_22.x | sudo -E bash - && sudo apt-get install -y nodejs
+
+    - name: Verify Node.js and npm versions  
+      run: node -v && npm -v
+
+    - name: Clone repository
+      env:
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        git clone https://x-access-token:$TOKEN@github.com/LeoYab/tecno-insumos.git
+        cd tecno-insumos
+        git checkout dev
+        
+    - name: Install dependencies
+      run: npm install
+
+    - name: Test
+      run: npm test
+
+    - name: Push Request
+      if: success() 
+      uses: devops-infra/action-pull-request@v0.5.5
+      with:
+        source_branch: dev
+        target_branch: main
+        title: "Auto PR"
+        body: "Tests passed. Push PR from dev to main."
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+
+
+       
