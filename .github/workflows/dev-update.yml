@@ -16,22 +16,9 @@ jobs:
       run: node -v && npm -v
 
     - name: Clone repository
-      env:
-        TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: |
-        git clone https://x-access-token:$TOKEN@github.com/LeoYab/tecno-insumos.git
-        cd tecno-insumos
-        git checkout dev
-        
-    - name: Install dependencies
-      run: |
-        cd tecno-insumos
-        npm install
-
-    - name: Test
-      run: |
-        cd tecno-insumos
-        npm test
+      uses: actions/checkout@v4
+      with:
+        ref: dev
 
     - name: Push Request
       if: success() 
