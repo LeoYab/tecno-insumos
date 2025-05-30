@@ -22,7 +22,7 @@ jobs:
        echo 'RUN npm install' >> Dockerfile
        echo 'COPY . .' >> Dockerfile
        echo 'EXPOSE 3000' >> Dockerfile
-       echo "CMD ["npm", "start"]" >> Dockerfile
+       echo 'CMD ["npm", "start"]' >> Dockerfile
 
     - name: Build docker image  
       run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest .
