@@ -14,9 +14,6 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Log in to DockerHub
-      run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ vars.DOCKERHUB_USERNAME }}" --password-stdin
-    
     - name: Create Dockerfile
       run: |
        echo 'FROM node:22-alpine' > Dockerfile
@@ -30,7 +27,18 @@ jobs:
     - name: Build docker image  
       run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest .
 
+    - name: Verify Docker image
+      run: |
+        docker run -d -p 3000:3000 ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest
+        sleep 5
+        curl -f http://localhost:3000
+
+    - name: Log in to DockerHub
+      if: success() 
+      run: echo "${{ secrets.DOCKERHUB_TOKEN }}" | docker login -u "${{ vars.DOCKERHUB_USERNAME }}" --password-stdin
+    
     - name: Push Docker image to DockerHub
+      if: success() 
       run: docker push ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest
       
       
