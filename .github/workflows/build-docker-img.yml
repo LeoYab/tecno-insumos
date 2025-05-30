@@ -29,7 +29,7 @@ jobs:
 
     - name: Verify Docker image
       run: |
-        docker run -d \ docker run -d \
+        docker run -d \
         -e REACT_APP_APIKEY=${{ secrets.REACT_APP_APIKEY }} \
         -e REACT_APP_APPID=${{ secrets.REACT_APP_APPID }} \
         -e REACT_APP_AUTHDOMAIN=${{ secrets.REACT_APP_AUTHDOMAIN }} \
