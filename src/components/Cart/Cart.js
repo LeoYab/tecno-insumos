@@ -22,7 +22,7 @@ const Cart = () => {
 
         return (
             <tr>
-                <td className="text-center" colSpan="4">Carrito Vacío</td>
+                <td className="text-center" colSpan="4">Sin productos agregados</td>
             </tr>
 
         )
