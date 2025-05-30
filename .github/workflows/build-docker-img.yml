@@ -22,7 +22,7 @@ jobs:
        echo 'RUN npm install' >> Dockerfile
        echo 'COPY . .' >> Dockerfile
        echo 'EXPOSE 3000' >> Dockerfile
-       echo 'CMD ["npm", "start"]' >> Dockerfile
+       echo "CMD ["npm", "start"]" >> Dockerfile
 
     - name: Build docker image  
       run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest .
@@ -30,7 +30,7 @@ jobs:
     - name: Verify Docker image
       run: |
         docker run -d -p 3000:3000 ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest
-        sleep 5
+        sleep 10
         curl -f http://localhost:3000
 
     - name: Log in to DockerHub
