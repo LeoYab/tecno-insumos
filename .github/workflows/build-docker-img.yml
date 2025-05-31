@@ -34,7 +34,8 @@ jobs:
         FIRST_DIGIT="${LAST_TAG:0:1}"
         INCREMENT=$((FIRST_DIGIT + 1))
         NEW_TAG="${INCREMENT}.0"
-      
+        echo "NEW_TAG=${NEW_TAG}" >> $GITHUB_ENV
+        
 
     - name: Build docker image  
       run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${NEW_TAG} .
