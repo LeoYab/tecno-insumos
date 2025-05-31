@@ -31,8 +31,9 @@ jobs:
       run: |
         LAST_TAG=$(curl -s https://hub.docker.com/v2/repositories/${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}/tags/?page_size=5 | jq -r '.results[0].name')
         echo "Last tag: $LAST_TAG"
-        FIRST_DIGIT="${$LAST_TAG:0:1}"
-        NEW_TAG=$((FIRST_DIGIT + 1))
+        FIRST_DIGIT="${LAST_TAG:0:1}"
+        INCREMENT=$((FIRST_DIGIT + 1))
+        NEW_TAG="${INCREMENT}.0"
       
 
     - name: Build docker image  
