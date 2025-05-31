@@ -24,20 +24,21 @@ jobs:
        echo 'EXPOSE 3000' >> Dockerfile
        echo 'CMD ["npm", "start"]' >> Dockerfile
 
+    - name: Install jq 
+      run: sudo apt-get install jq -y
+
+    - name: Get latest tag
+      run: |
+        LAST_TAG=$(curl -s https://hub.docker.com/v2/repositories/${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}/tags/?page_size=5 | jq -r '.results[0].name')
+        echo "Last tag: $LAST_TAG"
+        NEW_TAG=$($LAST_TAG++)
+
     - name: Build docker image  
-      run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest .
+      run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${NEW_TAG} .
 
     - name: Verify Docker image
       run: |
-        docker run -d \
-        -e REACT_APP_APIKEY=${{ secrets.REACT_APP_APIKEY }} \
-        -e REACT_APP_APPID=${{ secrets.REACT_APP_APPID }} \
-        -e REACT_APP_AUTHDOMAIN=${{ secrets.REACT_APP_AUTHDOMAIN }} \
-        -e REACT_APP_MESSAGINGSENDERID=${{ secrets.REACT_APP_MESSAGINGSENDERID }} \
-        -e REACT_APP_PROJECTID=${{ secrets.REACT_APP_PROJECTID }} \
-        -e REACT_APP_STORAGEBUCKET=${{ secrets.REACT_APP_STORAGEBUCKET }} \
-        -p 3000:3000 \
-        ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest
+        docker run -d -p 3000:3000 ${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${NEW_TAG}
         sleep 10
         curl -f http://localhost:3000
 
@@ -47,7 +48,7 @@ jobs:
     
     - name: Push Docker image to DockerHub
       if: success() 
-      run: docker push ${{ vars.DOCKERHUB_USERNAME }}/tecno-insumos:latest
+      run: docker push ${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${NEW_TAG}
       
       
 
