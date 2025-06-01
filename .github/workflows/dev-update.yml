@@ -20,13 +20,15 @@ jobs:
       run: node -v && npm -v
 
     - name: Checkout dev branch
-      uses: actions/checkout@v4
-      with:
-        ref: dev
-        fetch-depth: 0 
-
-    - name: Run tests
       run: |
+        git clone --branch=dev https://github.com/${{ github.repository }}.git
+        cd ${{ github.event.repository.name }}
+        echo "REPO=${{ github.event.repository.name }}" >> $GITHUB_ENV
+        git status
+        
+    - name: Install dependencies & run tests
+      run: |
+        cd ${REPO}
         npm install
         npm test
 
