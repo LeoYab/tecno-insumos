@@ -21,7 +21,7 @@ jobs:
 
     - name: Checkout dev branch
       run: |
-        git clone --depth=0 --branch=dev https://github.com/${{ github.repository }}.git
+        git clone --branch=dev https://github.com/${{ github.repository }}.git
         cd $(basename ${{ github.repository }})
         git status
 
