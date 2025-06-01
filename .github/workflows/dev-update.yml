@@ -22,13 +22,11 @@ jobs:
     - name: Checkout dev branch
       run: |
         git clone --branch=dev https://github.com/${{ github.repository }}.git
-        cd ${{ github.event.repository.name }}
         git status
 
     - name: Run tests
       run: |
         npm install
-      working-directory: tecno-insumos
         npm test
 
     - name: Create Pull Request to main
