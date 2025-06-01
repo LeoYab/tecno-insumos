@@ -23,8 +23,12 @@ jobs:
       run: |
         git clone --branch=dev https://github.com/${{ github.repository }}.git
         cd ${{ github.event.repository.name }}
+        echo "REPO=${{ github.event.repository.name }}" >> $GITHUB_ENV
         git status
-        echo "Install dependencies and run tests"
+        
+    - name: Install dependencies & run tests
+      run: |
+        cd ${REPO}
         npm install
         npm test
 
