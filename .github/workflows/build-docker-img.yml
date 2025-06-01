@@ -20,7 +20,7 @@ jobs:
        cd ${{ github.event.repository.name }}
        echo 'FROM node:22-alpine' > Dockerfile
        echo 'WORKDIR /app' >> Dockerfile
-       echo 'COPY package*.json .' >> Dockerfile
+       echo 'COPY package*.json ./' >> Dockerfile
        echo 'RUN npm install' >> Dockerfile
        echo 'COPY . .' >> Dockerfile
        echo 'EXPOSE 3000' >> Dockerfile
@@ -40,7 +40,9 @@ jobs:
         
 
     - name: Build docker image  
-      run: docker build -t ${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${NEW_TAG} .
+      run: |
+        cd ${{ github.event.repository.name }}
+        docker build -t ${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${NEW_TAG} .
 
     - name: Verify Docker image
       run: |
