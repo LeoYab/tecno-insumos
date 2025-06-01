@@ -13,11 +13,11 @@ jobs:
       run: | 
         git clone https://github.com/${{ github.repository }}.git
         cd ${{ github.event.repository.name }}
-        echo "REPO=${{ github.event.repository.name }}" >> $GITHUB_ENV
         git status
 
     - name: Create Dockerfile
       run: |
+       cd ${{ github.event.repository.name }}
        echo 'FROM node:22-alpine' > Dockerfile
        echo 'WORKDIR /app' >> Dockerfile
        echo 'COPY package*.json ./REPO' >> Dockerfile
