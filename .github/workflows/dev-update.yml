@@ -28,6 +28,7 @@ jobs:
     - name: Run tests
       run: |
         npm install
+      working-directory: tecno-insumos
         npm test
 
     - name: Create Pull Request to main
