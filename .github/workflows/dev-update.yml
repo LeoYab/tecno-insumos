@@ -22,7 +22,6 @@ jobs:
     - name: Checkout dev branch
       run: | 
         git clone https://github.com/${{ github.repository }}.git
-        cd ${{ github.event.repository.name }}
         git checkout dev
 
     - name: Run tests
