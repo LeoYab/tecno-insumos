@@ -22,10 +22,9 @@ jobs:
     - name: Checkout dev branch
       run: |
         git clone --branch=dev https://github.com/${{ github.repository }}.git
+        cd ${{ github.event.repository.name }}
         git status
-
-    - name: Run tests
-      run: |
+        echo "Install dependencies and run tests"
         npm install
         npm test
 
