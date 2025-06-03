@@ -10,10 +10,15 @@ jobs:
 
     steps:
     - name: Clone repository 
-      uses: actions/checkout@v3
+      run: |
+        git clone --branch=dev https://github.com/${{ github.repository }}.git
+        cd ${{ github.event.repository.name }}
+        echo "REPO=${{ github.event.repository.name }}" >> $GITHUB_ENV
+        git status
 
     - name: Create Dockerfile
       run: |
+       cd ${{ env.REPO }}
        echo 'FROM node:22-alpine' > Dockerfile
        echo 'WORKDIR /app' >> Dockerfile
        echo 'COPY package*.json ./' >> Dockerfile
@@ -37,10 +42,12 @@ jobs:
 
     - name: Build docker image  
       run: |
+        cd ${{ env.REPO }}
         docker build -t ${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${NEW_TAG} .
 
     - name: Verify Docker image
       run: |
+        cd ${{ env.REPO }}
         docker run -d -p 3000:3000 ${{ vars.DOCKERHUB_USERNAME }}/${{ github.event.repository.name }}:${NEW_TAG}
         sleep 10
         curl -f http://localhost:3000
