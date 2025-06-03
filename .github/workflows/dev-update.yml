@@ -28,7 +28,7 @@ jobs:
         
     - name: Install dependencies & run tests
       run: |
-        cd ${REPO}
+        cd ${{ env.REPO }}
         npm install
         npm test
 
